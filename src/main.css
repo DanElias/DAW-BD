@@ -31,6 +31,7 @@ nav{
     font-family: 'bebas_neueregular';
     font-weight:normal;
     font-style:normal;
+    background-color: #16181c;
 }
 
 ul {
@@ -38,7 +39,7 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: background-color: #16181c;;
 }
 
 li {
@@ -93,4 +94,15 @@ video {
 .information{
     box-sizing: content-box;
     height: 900px;
+}
+
+footer{
+    height: 150px;
+    background-color: #16181c;
+    padding: 50px;
+    font-family: 'bebas_neueregular';
+    font-weight:normal;
+    font-style:normal;
+    font-size: 30px;
+    color:white;
 }
