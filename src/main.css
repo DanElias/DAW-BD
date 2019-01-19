@@ -1,0 +1,96 @@
+@font-face {
+    font-family: 'lemonmilkregular';
+    src: url('fonts/lemonmilk-webfont.woff2') format('woff2'),
+         url('fonts/lemonmilk-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'bebas_neueregular';
+    src: url('fonts/bebasneue-regular-webfont.woff2') format('woff2'),
+    url('fonts/bebasneue-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+font-face {
+    font-family: 'bebas_neueregular';
+    src: url('fonts/aller_rg-webfont.woff2') format('woff2'),
+    url('fonts/aller_rg-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    margin: 0
+}
+
+nav{
+    font-family: 'bebas_neueregular';
+    font-weight:normal;
+    font-style:normal;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+header{
+    background-image: url(img/sunset_header.jpg);
+    background-size: 1350px 820px;
+    height: 400px;
+    background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+video {
+    position: inherit;
+    min-width: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url('img/car.png');
+
+  /* Full height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+    will-change: transform;
+    
+}
+
+.information{
+    box-sizing: content-box;
+    height: 900px;
+}
