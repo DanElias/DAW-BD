@@ -15,8 +15,8 @@
     font-style: normal;
 }
 
-font-face {
-    font-family: 'bebas_neueregular';
+@font-face{
+    font-family: 'aller';
     src: url('fonts/aller_rg-webfont.woff2') format('woff2'),
     url('fonts/aller_rg-webfont.woff') format('woff');
     font-weight: normal;
@@ -61,11 +61,56 @@ li a:hover {
 header{
     background-image: url(img/sunset_header.jpg);
     background-size: 1350px 820px;
-    height: 400px;
+    height: 250px;
     background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    font-family: 'bebas_neueregular';
+    font-weight:normal;
+    font-style:normal;
+    font-size: 70px;
+    color: white;
+    padding-top: 150px;
+}
+
+.first_table{
+   width: 100%;
+    text-align: center;
+    background-color: rgba(4, 7, 12,0.75);
+    table-layout: fixed;
+    word-wrap: break-word;
+    padding-top: 10px;
+}
+
+.second_table{
+   width: 100%;
+    text-align: center;
+    background-color: rgba(4, 7, 12,0.75);
+    table-layout: fixed;
+    word-wrap: break-word;
+}
+
+.img_cell{
+    padding: 20px;
+}
+
+.table_text{
+    font-family: 'aller';
+    font-size: 20px;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+}
+
+.information{
+    font-family: 'bebas_neueregular';
+    font-size: 30px;
+    color: white;
+    margin-top: 0px;
 }
 
 video {
@@ -80,7 +125,22 @@ video {
   background-image: url('img/car.png');
 
   /* Full height */
-  height: 100%; 
+    height: 1350px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+    will-change: transform;
+}
+
+.parallax2 {
+  /* The image used */
+  background-image: url('img/code.png');
+
+  /* Full height */
+    height: 1170px;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -97,7 +157,7 @@ video {
 }
 
 footer{
-    height: 150px;
+    height: 350px;
     background-color: #16181c;
     padding: 50px;
     font-family: 'bebas_neueregular';
@@ -105,4 +165,12 @@ footer{
     font-style:normal;
     font-size: 30px;
     color:white;
+}
+
+section{
+    margin: 0;
+}
+
+input{
+    font-family: 'bebas_neueregular';
 }

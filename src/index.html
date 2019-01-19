@@ -3,28 +3,93 @@
     <body>
         <link href="main.css" rel="stylesheet" type="text/css">
         
+        <title>Lab 1 DAW</title>
+        
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
         
         <nav> 
             <ul>
-                <li><a class="active" href="#home">Home</a></li>
-                <li><a href="#news">Hobbies</a></li>
-                <li><a href="#contact">Preguntas</a></li>
-                <li><a href="#about">Contacto</a></li>
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
+                <li><a href="#preguntas">Preguntas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
             </ul> 
         </nav>
         
-        <header> </header>
+        <header> 
+            <section>
+                <h >Lab 1 DAW</h>
+            </section>
+        </header>
 
-        
-        
         <section class="parallax">_
             <article class="information"> 
-                <h1></h1>
-                <!--h headings-->
-                <p></p>
-                <!--p paragraphs-->
+                <table class="first_table">
+                    <tr>
+                        <th>ACERCA DE MI <hr></th>
+                    </tr>
+                    <tr>
+                        <td class="table_text">Mi nombre es Daniel Elias pero mis amigos me dicen Dan. Tengo 20 años, soy de Querétaro y actualmente estudio el 4to semestre de Ingeniería en Sistemas Computacionales en el Tec de Monterrey Campus Querétaro.</td>
+                    </tr>
+                 </table>
+                
+                 <br>
+                <table class="first_table">
+                    <tr>
+                        <th id="hobbies">HOBBIES Y PROYECTOS <hr> </th>
+                    </tr>
+                </table>
+                
+                <table class="second_table">
+                    <tr>
+                        <td class="table_text">Música: <br>Se tocar el piano y la guitarra. También estoy en el grupo representativo de coro, por lo que me gusta cantar. Inclusive he intentado componer música.<a href="https://soundcloud.com/daneliasb" target="_blank" > <br>Link a mi Soundcloud</a>  </td>
+                        <td class="img_cell"><img src="img/coro.png" width="470" height="300"> </td>
+                    </tr>
+                    <tr>
+                        <td class="img_cell"><img src="img/car.png" width="470" height="300"> </td>
+                        <td class="table_text">Pintura y Arte Digital: <br> Me gusta la pintura al acrílico u oleo, he tomado varias clases de artes plásticas. Asímismo, me gusta realizar arte digital y tomar fotografías.<a href="https://www.instagram.com/dan.elias_/" target="_blank" > <br> Link a mi Instagram</a>
+            <!--href Links-->
+            <!--target="_blank" open in new tab Links--></td>
+                        
+                    </tr>
+                    <tr>
+                        <td class="table_text">Porgramación: <br> Me encanta programar y crear páginas web y aplicaciones, videojuegos y todo lo que involucra su proceso de creación.  <a href="https://github.com/DanElias" target="_blank" > <br> Link a mi Github </a></td>
+                        <td class="img_cell"><img src="img/logo.png" width="530" height="300"> </td>
+                       
+                    </tr>
+                 </table>
             </article>
+            
+        </section>
+        
+        <section class="parallax2">_
+            <article class="information"> 
+                <table class="first_table">
+                    <tr>
+                        <th id="preguntas"> Preguntas e investigación <hr> </th>
+                    </tr>
+                </table>
+                
+                <table class="second_table">
+                    <tr>
+                        <td class="table_text">Música: <br>Se tocar el piano y la guitarra. También estoy en el grupo representativo de coro, por lo que me gusta cantar. Inclusive he intentado componer música.<a href="https://soundcloud.com/daneliasb" target="_blank" > <br>Link a mi Soundcloud</a>  </td>
+                        <td class="img_cell"><img src="img/coro.png" width="470" height="300"> </td>
+                    </tr>
+                    <tr>
+                        <td class="img_cell"><img src="img/car.png" width="470" height="300"> </td>
+                        <td class="table_text">Pintura y Arte Digital: <br> Me gusta la pintura al acrílico u oleo, he tomado varias clases de artes plásticas. Asímismo, me gusta realizar arte digital y tomar fotografías.<a href="https://www.instagram.com/dan.elias_/" target="_blank" > <br> Link a mi Instagram</a>
+            <!--href Links-->
+            <!--target="_blank" open in new tab Links--></td>
+                        
+                    </tr>
+                    <tr>
+                        <td class="table_text">Porgramación: <br> Me encanta programar y crear páginas web y aplicaciones, videojuegos y todo lo que involucra su proceso de creación.  <a href="https://github.com/DanElias" target="_blank" > <br> Link a mi Github </a></td>
+                        <td class="img_cell"><img src="img/logo.png" width="530" height="300"> </td>
+                       
+                    </tr>
+                 </table>
+            </article>
+            
         </section>
         
         <!-- <section> <img src="img/car.png" alt="car" width="1080" height="720">
@@ -42,9 +107,18 @@
         
         <aside></aside>
         
-        <footer> 
+        <footer id="contacto"> 
             <p>Contacto</p>
-            <p style="font-size: 20px">Daniel Elias Becerra &nbsp &nbsp &nbsp  A01208905 </br> daniel.eliasbecerra98@gmail.com</p>
+            <p style="font-size: 20px">Daniel Elias Becerra &nbsp &nbsp &nbsp  A01208905 <br> daniel.eliasbecerra98@gmail.com</p>
+            
+            <form action="">
+                Subscribe!<br>
+                <input type="text" name="name" value="Full Name">
+                <br>
+                <input type="text" name="email" value="Email">
+                <br>
+                <input type="submit" value="Submit">
+            </form> 
         </footer>
         
     </body>
