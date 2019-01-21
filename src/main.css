@@ -86,10 +86,17 @@ header{
 
 .second_table{
    width: 100%;
-    text-align: center;
+    text-align: left;
     background-color: rgba(4, 7, 12,0.75);
     table-layout: fixed;
     word-wrap: break-word;
+    height: 100%;
+}
+
+.third_table{
+   width: 100%;
+    text-align: left;
+    background-color: rgba(4, 7, 12,0.75);
 }
 
 .img_cell{
@@ -140,7 +147,7 @@ video {
   background-image: url('img/code.png');
 
   /* Full height */
-    height: 1170px;
+    height: 5900px;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
