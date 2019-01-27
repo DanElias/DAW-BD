@@ -10,7 +10,6 @@
     </head>
         
     <body>
-        
         <script type="text/javascript">
             
             function cuadrados_cubos() {
@@ -147,7 +146,7 @@
             }
             
             function main(){
-                var m=prompt("Input a number: ");
+                var m=prompt("Input the number m of trailing zeroes: ");
                 var my_solution=new trivial_problem(m)
                 var nums=my_solution.solve(my_solution.m);
                 my_solution.print(my_solution.m,nums);
@@ -193,7 +192,9 @@
         <nav> 
             <ul>
                 <li><a class="active" href="index.html">Home</a></li>
-                <li><a href="#preguntas">Pruebas</a></li>
+                <li><a href="#pruebas">Pruebas</a></li>
+                <li><a href="#preguntas">Preguntas</a></li>
+                <li><a href="#referencias">Referencias</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul> 
         </nav>
@@ -210,7 +211,7 @@
             <h6>-</h6>
                 <table class="first_table">
                     <tr>
-                        <th id="preguntas"> Da click para probar los casos:<hr></th>
+                        <th id="pruebas"> Da click para probar los casos:<hr></th>
                         
                     </tr>
                 </table>
@@ -259,11 +260,48 @@
                         </td>
                     </tr>
                     
+                    <tr>
+                        <td class="table_text" id="preguntas"><strong><hr>PREGUNTAS E INVESTIGACIÓN<hr></strong><br>
+                        </td>
+                    </tr>
+                    
+                     <tr>
+                        <td class="table_text"><strong>¿Qué diferencias y semejanzas hay entre Java y JavaScript?</strong><br><br>-JavaScript no crea applets aplicaciones independientes. Puede proporcionar niveles de interactividad a páginas web.<br><br>-Java es un lenguaje de programación Orientado a Objetos, mientras que JavaScript es un lenguaje de scripting (scripting language) Orientado a Objetos.<br><br>-Con Java se pueden crear aplicaciones que se ejecutan en una máquina virtual o navegador, mientras que JavaScript sólo se ejecuta en un navegador.<br><br>-El código Java debe compilarse, mientras que JavaScript está todo en texto.<br><br>-JavaScript es un lenguaje interpretado mientras que Java es un lenguaje compilado.<br><br>-Requieren diferentes plug-ins. [1]<br><br>
+                        </td>
+                    </tr>
+                    
+                     <tr>
+                        <td class="table_text"><strong>¿Qué métodos tiene el objeto Date? (Menciona al menos 5*)</strong><br><br>-getFullYear() Obtiene el año (yyyy)<br><br>-getMonth() Obtiene el mes (0-11)<br><br>-getDate() Obtiene el número de día (1-31)<br><br>-getHours() Obtiene la hora (0-23)<br><br>-getTime() milisegundos desde Enero 1 1970<br><br>-Date.now() Get the time. ECMAScript 5.<br><br>-getMilliseconds() Obtener los milisegundos (0-999)<br><br>-getDay() Obtener día de la semana (0-6)<br><br>-getSeconds() Obtener el segundo actual (0-59)<br><br>-getMinutes Obtener el minuto actual (0-59)<br><br>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="table_text"><strong>¿Qué métodos tienen los arreglos? (Menciona al menos 5*)</strong><br><br>-toString() = convierte cada elemento a string<br><br>-join(): junta todos los elementos en un string<br><br>-pop(): remueve el último elemento del array<br><br>-push(): agrega un nuevo elemento al final del array<br><br>-shift(): remueve el primer elemento del array y recorre todos los elementos una posición atrás.<br><br>-unshift(): agrega un elemento al principio del array y recorre los demás elementos.<br><br>-splice(): agregar elementos en una posición deseada.<br><br>-concat(): junta dos arrays en uno solo<br><br>-slice(): corta un array y guarda desde donde se cortó hasta el final del array en un array nuevo.<br><br>-También hay métodos de sort.[3]<br><br>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="table_text"><strong>¿Cómo se declara una variable con alcance local dentro de una función?</strong><br><br>Simplemente se declara pero dentro de la función, Se puede usar var para declararla. Una función que se declara dentro de una función sólo funcionará dentro de esa función y funciones que estén dentro de la misma función. En JavaScript, si se declara una función adentro de un bloque como for, toda la función tendrá acceso a ella.[4]<br><br>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="table_text"><strong>¿Qué implicaciones tiene utilizar variables globales dentro de funciones?</strong><br><br>Las variables que se declaran fuera de una función son globales y son accesibles desde cualquier parte del código. Si se tienen muchas variables globales es posible confundirse y volver a declarar la misma variable en otra parte del código, además de que hay menos control sobre qué cosas están afectando a la variables. Además JS tarda más en encontrar a las variables globales.[5]<br><br>
+                        </td>
+                    </tr>
+                    
+                     <tr>
+                        <td class="table_text"><strong>¿Qué método de String se puede utilizar para buscar patrones con expresiones regulares?¿Para qué podrías utilizar esto en una aplicación web?</strong><br><br>Se puede usar match() y se puede utilizar para buscar palabras o expresiones en una página web de una forma rápida. Como por ejemplo si necesito navegar en una página web y buscar algo en la sección de búsqueda.[6]<br><br>
+                    </tr>
+                    
+                    <tr>
+                        <td class="table_text" id="referencias"><strong><hr>REFERENCIAS<hr></strong><br><br>[1]https://www.java.com/en/download/faq/java_javascript.xml<br>[2] https://www.w3schools.com/js/js_date_methods.asp <br>[3] https://www.w3schools.com/js/js_array_methods.asp <br>[4] https://www.sitepoint.com/demystifying-javascript-variable-scope-hoisting/<br>[5] https://stackoverflow.com/questions/10525582/why-are-global-variables-considered-bad-practice <br>[6] https://www.w3schools.com/jsref/jsref_match.asp <br><br>
+                    </tr>
+                    
                     
                  </table>
             </article>
         </section>
-            
         
         <aside></aside>
         
