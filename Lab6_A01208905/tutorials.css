@@ -1,0 +1,69 @@
+#tutorial1{
+    height: 350px;;
+}
+
+div.a {
+    position: relative;
+    margin: 0 auto;
+    width: 400px;
+    height: 300px;
+    top: 20px;
+    border: 3px solid red;
+    background-color: rgba(4, 7, 12,0.75);
+}
+
+div.b {
+    position: absolute;
+    top: 0;
+    border: 3px solid blue;
+} 
+
+div.c {
+    position: absolute;
+    top: 80px;
+    border: 3px solid green;
+} 
+
+#change_button{
+    background-color:#161c26;
+    border-radius: 50px 50px;
+    border-color: white;
+}
+
+#change_fontsize{
+    background-color:#161c26;
+    border-radius: 50px 50px;
+    border-color: white;
+}
+
+#change_visibility{
+    background-color:#161c26;
+    border-radius: 50px 50px;
+    border-color: white;
+}
+
+.font1{
+    font-family: "Times New Roman";
+    font-style: italic;
+    font-size: 20px;
+    font-weight: bold;
+    visibility: visible; 
+}
+
+.font2{
+    /*pixels/16=em*/
+    font-family: "Arial";
+    font-style: oblique;
+    font-size: 1.2em;
+    font-size:3vw;
+    visibility: visible;
+}
+
+.font3{
+    font-family: bebas_neueregular;
+    font-style: normal;
+    font-size: 190%;
+    font-variant: small-caps;
+    visibility: visible;
+}
+

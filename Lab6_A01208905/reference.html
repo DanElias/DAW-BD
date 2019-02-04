@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+    <meta charset="UTF-8">
+    
+    <title>IEEE Generator</title>
+    
+    <head>
+        <script type="text/javascript" src="script.js"></script>
+        <link href="main.css" rel="stylesheet" type="text/css">
+    </head>
+        
+    <body>
+       
+        <nav> 
+            <ul>
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="passwords.html">Passwords</a></li>
+                <li><a href="tienda.html">Tienda</a></li>
+                <li><a href="reference.html">IEEE Generator</a></li>
+                <li><a href="index.html#preguntas">Preguntas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul> 
+        </nav>
+        
+        <header id="passwords_header"> 
+            <section>
+                <h3>IEEE Generator</h3>
+            </section>
+        </header>
+
+        <section class="parallax2" id="passwords_body">
+            <h6>-</h6>
+            <article class="information">
+            <h6>-</h6>
+                
+                <table class="third_table">
+                     <tr>
+                        <td class="table_text"><strong></strong><br>
+                            
+                             <form method="post">
+                                    <label class="basiclabel">Introduce los Autores en formato: [InicialNombre]., Apellido</label><br>
+                                    <input class="textfield" id="textfield1" type="text" name="autores" value="">
+                                    <label class="labelmistake" id="labelmistake1"></label><br>
+                                    <br>
+                                    <label class="basiclabel">Introduce el Título de la página web:</label><br>
+                                    <input class="textfield" id="textfield2" type="text" name="titulo" value="">
+                                    <label class="labelmistake" id="labelmistake2"></label><br>
+                                    <br>
+                                    <label class="basiclabel">Introduce el URL de la página web:</label><br>
+                                    <input class="textfield" id="textfield3" type="textarea" name="titulo" value="">
+                                    <label class="labelmistake"id="labelmistake3"></label><br>
+                                    <br>
+                                    <label class="basiclabel">Introduce la última fecha de modificación de la página web en formato Mes día, año:</label><br>
+                                    <input class="textfield" id="textfield4" type="text" name="fecha" value="">
+                                    <label class="labelmistake" id="labelmistake4"></label><br>
+                                    <br>
+                                    <label class="basiclabel">Introduce la fecha de acceso en formato Mes día, año: </label><br>
+                                    <input class="textfield" id="textfield5" type="text" name="fecha" value="">
+                                    <label class="labelmistake" id="labelmistake5"></label><br>
+                                    <br>
+                            </form>
+                            <button id="botonsubmit" class="mybuttons">Listo</button>
+
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="table_text"><strong>Tu cita IEEE es la siguiente:</strong><br>
+                            <p id="cita"></p> 
+                        </td>
+                    </tr>
+                    
+                 </table>
+            </article>
+        </section>
+        
+        <aside></aside>
+        
+        <footer id="contacto"> 
+            <p>Contacto</p>
+            <p style="font-size: 20px">Daniel Elias Becerra &nbsp; &nbsp; &nbsp;  A01208905 <br> daniel.eliasbecerra98@gmail.com<br><br>
+                Editor HTML: Brackets <br> <a href="http://brackets.io/">brackets.io</a> </p>
+            
+            <form action="enviar_mensaje">
+                Mándame un mensaje!<br>
+                <input type="text" name="name" value="Nombre completo">
+                <br>
+                <input type="text" name="email" value="Email">
+                <br>
+                <input type="text" name="email" value="Mensaje">
+                <br>
+                <input type="submit" value="Enviar">
+            </form> 
+        </footer>
+        
+    </body>
+    
+     <script type="text/javascript">
+        var error=0;
+        document.getElementById("textfield1").oninput=validar;
+        document.getElementById("textfield2").oninput=validar;
+        document.getElementById("textfield3").oninput=validar;
+        document.getElementById("textfield4").oninput=validar;
+        document.getElementById("textfield5").oninput=validar;
+        document.getElementById("botonsubmit").onclick=valfin;
+         
+        function validar(){
+            if(document.getElementById("textfield1").value!=""){
+                document.getElementById("labelmistake1").innerHTML=" ";
+                error=0;
+            }
+            
+             if(document.getElementById("textfield2").value!=""){
+                document.getElementById("labelmistake2").innerHTML=" ";
+                error=0;
+            }
+            
+             if(document.getElementById("textfield3").value!=""){
+                document.getElementById("labelmistake3").innerHTML=" ";
+                error=0;
+            }
+            
+             if(document.getElementById("textfield4").value!=""){
+                document.getElementById("labelmistake4").innerHTML=" ";
+                error=0;
+            }
+            
+             if(document.getElementById("textfield5").value!=""){
+                document.getElementById("labelmistake5").innerHTML=" ";
+                error=0;
+            }
+                
+        }
+         
+        function valfin(){
+            var autores;
+            var titulo;
+            var url;
+            var fecha1;
+            var fecha2;
+            autores=document.getElementById("textfield1").value;
+            titulo=document.getElementById("textfield2").value;
+            url=document.getElementById("textfield3").value;
+            fecha1=document.getElementById("textfield4").value;
+            fecha2=document.getElementById("textfield5").value;
+            
+            if(document.getElementById("textfield1").value==""){
+                document.getElementById("labelmistake1").innerHTML="<br>Falta poner el Autor(es), si no sabe quiénes son poner: Anónimo"
+                error=1;
+            }
+            
+            if(document.getElementById("textfield2").value==""){
+                document.getElementById("labelmistake2").innerHTML="<br>Falta poner el Título, si no tiene poner: Sin Título"
+                error=1;
+            }
+            
+            if(document.getElementById("textfield3").value==""){
+                document.getElementById("labelmistake3").innerHTML="<br>Falta poner el URL, es necesario"
+                error=1;
+            }
+            
+            if(document.getElementById("textfield4").value==""){
+                document.getElementById("labelmistake4").innerHTML="<br>Falta poner la última fecha de modificación, si no tiene poner: s.f."
+                error=1;
+            }
+            
+            if(document.getElementById("textfield5").value==""){
+                document.getElementById("labelmistake5").innerHTML="<br>Falta poner la fecha de consulta, es necesario"
+                error=1;
+            }
+            
+            if(error!=1){
+                document.getElementById("cita").innerHTML=autores+"  &quot;"+titulo+"&quot; Internet:"+url+", "+fecha1+" ["+fecha2+"]. ";
+            }
+            else{
+                document.getElementById("cita").innerHTML="Existen errores en el llenado de los campos. Favor de corregirlos. <br> Si ya corrigió los errores, favor de presionar el botón Listo nuevamente."
+            }
+            
+         }  
+         
+    </script>
+</html>
