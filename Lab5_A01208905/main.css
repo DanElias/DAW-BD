@@ -103,7 +103,7 @@ h6{
     opacity: 0;
 }
 
-#textfield, #textfield2{
+.textfield{
     font-size: 30px;
     font-family: aller;
     margin: auto;
@@ -125,7 +125,7 @@ h6{
     display: block;
 }
 
-#labelmistake{
+#labelmistake, .labelmistake{
     font-size: 30px;
     margin: auto;
     text-align: center;
@@ -136,7 +136,7 @@ h6{
     color: indianred;
 }
 
-#labelcorrect{
+#labelcorrect,.labelcorrect{
     font-size: 30px;
     margin: auto;
     text-align: center;
@@ -159,7 +159,7 @@ h6{
 }
 
 
-#botonsubmit{
+.mybuttons{
     font-family: aller;
     font-size: 30px;
     margin: auto;
@@ -345,6 +345,10 @@ input{
 
 #validar1, #validar2, #validar3{
     color:limegreen;
+}
+
+#cita{
+    font-size: 20px;
 }
 
 
