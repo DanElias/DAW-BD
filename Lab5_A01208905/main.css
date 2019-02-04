@@ -32,7 +32,20 @@ nav{
     font-weight:normal;
     font-style:normal;
     background-color: #16181c;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition-timing-function:steps();
+    will-change: transform;
+    will-change:scroll-position;
+    z-index: 1;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
 }
+
+
 
 ul {
   list-style-type: none;
@@ -40,6 +53,12 @@ ul {
   padding: 0;
   overflow: hidden;
   background-color: background-color: #16181c;;
+}
+
+audio{
+    border: 0;
+    margin: 0;
+    padding: 0;
 }
 
 li {
@@ -58,8 +77,12 @@ li a:hover {
   background-color: #111;
 }
 
+table{
+    margin: 0;
+    border: 0;
+}
+
 header{
-    background-image: url(img/password.jpg);
     background-size: 1350px 820px;
     height: 250px;
     background-attachment: fixed;
@@ -205,7 +228,7 @@ video {
 
 .parallax {
   /* The image used */
-  background-image: url('img/car.png');
+
 
   /* Full height */
     height: 1350px;
@@ -215,7 +238,39 @@ video {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+      transition-timing-function:steps();
     will-change: transform;
+    background-color: white;
+      will-change:scroll-position;
+    z-index: -3;
+    
+}
+
+#home_header{
+    background-image: url('img/sunset_header.jpg');
+    
+}
+
+#home_body{
+    background-image: url('img/code.jpg');
+}
+
+#passwords_header{
+    background-image: url('img/password.jpg');
+}
+
+#passwords_body{
+    background-image: url('img/code.jpg');
+}
+
+#tienda_header{
+    background-image: url('img/code.jpg');
+    text-shadow: 4px 4px darkslategray;
+    background-color: 
+}
+
+#tienda_body{
+    background-image: url('img/code.jpg');
 }
 
 .body{
@@ -226,12 +281,13 @@ video {
 
 .parallax2 {
   /* The image used */
-  background-image: url('img/code.jpg');
+  
 
   /* Full height */
     height: auto;
     height: 100%;
     margin: 0;
+    transform-style: preserve-3d;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -239,7 +295,10 @@ video {
   background-repeat: no-repeat;
   background-size: cover;
     will-change: transform;
-    
+    will-change:scroll-position;
+    transition-timing-function:steps();
+background-color: white;
+ 
 }
 
 .information{
@@ -266,3 +325,27 @@ section{
 input{
     font-family: 'bebas_neueregular';
 }
+
+.boton_sumar, .boton_restar{
+    font-family:'bebas_neueregular';
+    border-color: rgba(255,255,255,1);
+    border-radius: 50px 50px 50px 50px;
+    background-color: #141e2b;
+    font-size: 30px;
+    color: white;
+}
+
+.boton_restar{
+    font-size: 30px;
+}
+
+#carrito{
+    font-size: 20px;
+}
+
+#validar1, #validar2, #validar3{
+    color:limegreen;
+}
+
+
+
