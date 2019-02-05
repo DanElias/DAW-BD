@@ -2,7 +2,7 @@
 <html lang="es">
     <meta charset="UTF-8">
     
-    <title>Lab 5 DAW</title>
+    <title>Lab 6 DAW</title>
     
     <head>
         <script type="text/javascript" src="script.js"></script>
@@ -15,7 +15,7 @@
         <nav> 
             <ul>
                 <li><a class="active" href="index.html">Home</a></li>
-                <li><a href="passwords.html">LOL</a></li>
+                <li><a href="#images">Puzzle</a></li>
                 <li><a href="index.html#preguntas">Preguntas</a></li>
                 <li><a href="index.html#referencias">Referencias</a></li>
                 <li><a href="#contacto">Contacto</a></li>
@@ -40,6 +40,7 @@
             <article class="information">
             <h6>-</h6>
         
+                <!-- En esta sección se puede ver el uso de los diferentes estilos de posiciones aplicado a los divs-->
                 <article id="tutorial1">
                     <div class="a" id="a">
                         <div class="b" id="b"> div a has position relative. div b has position absolute and top 0.
@@ -54,6 +55,7 @@
                 <table class="third_table">
                     
                     <tr>
+                        <!-- En esta sección se puede ver cómo es que cambian los atributos del font cuando se pasa el mouse arriba de los botones usando onmouseover-->
                         <td class="table_text">
                             <p class="font1" id="font1">This text is in Times New Roman and Italic Style Bold 20px</p>
                             <p class="font2" id="font2">This text is in Arial and Oblique Style 1.2em 3vw</p>
@@ -67,6 +69,7 @@
                     
                     <tr>
                         <td>
+                            <!-- En este form se puede apreciar como aparece dinámicamente información de ayuda para el usuario-->
                             <form method="post">
                                 <label class="basiclabel">Introduce un password:</label><br>
                                 <input class="textfield" id="textfield" type="text" name="password" value="">
@@ -85,6 +88,7 @@
                         </td>
                     </tr>
                     
+                    <!-- En esta sección se utiliza el drag and drop así como el setInterval clearInterval y setTimeout-->
                     <tr>
                         <td id="images"> DRAG AND DROP PUZZLE<br><br>
                         <button class="mybuttons" id="play_button"> PLAY </button><br>
@@ -139,22 +143,23 @@
                     </tr>
                     
                      <tr>
-                        <td class="table_text"><strong>¿Por qué es una buena práctica usar JavaScript para checar que sean válidos los inputs de las formas antes de enviar los datos al servidor?</strong><br><br>
+                        <td class="table_text"><strong>¿Cuáles son las diferencias entre los diferentes valores de la propiedad position?</strong><br>-Static: Los elementos se cargan en orden, tal y como aparecen en el documento.<br>-Absolute: el elemento se posiciona relativo a su primer elemento ancestro que no sea static.<br>-Fixed: El elemento se posiciona relativo a la ventana del navegador.<br>-Relative:El elemento se posiciona relativo a su posición normal. Es decir, si se pone left:20 entonces se agregan 20 píxeles a la izquierda del elemento.<br>-Sticky: El elemento se posiciona dependiendo de la posición de desplazamiento del usuario en la página. Por ejemplo que cuando vayas bajando la navbar bajé contigo pero que cuando llegues al footer se quede estática y ya no siga moviéndose con el scroll.<br>-Initial: la propiedad vuelve a su valor default.<br>-Inherit: La propiedad se hereda del elemento padre.[1]<br>
                         </td>
                     </tr>
                     
                      <tr>
-                        <td class="table_text"><strong>¿Cómo puedes saltarte la seguridad de validaciones hechas con JavaScript?</strong><br><br>
+                        <td class="table_text"><strong>¿Cuáles son los valores estándar para la propiedad visibility?</strong><br>-Visible: el elemento es visible. Esta es la opción default.<br>-Hidden: el elemento es invisible pero aún afecta la distribución de los elementos en la página.<br>-Collapse: Cuando se usa en la columna o renglón de la tabla, el elemento es invisible.<br>-Initial: la propiedad vuelve a su valor default.<br>-Inherit: La propiedad se hereda del elemento padre.[2]<br>
                         </td>
                     </tr>
                     
                     <tr>
-                        <td class="table_text"><strong>Si te puedes saltar la seguridad de las validaciones de JavaScript, entonces ¿por qué la primera pregunta dice que es una buena práctica?</strong><br><br>
+                        <td class="table_text"><strong>¿Qué es el z-index y para qué sirve?</strong><br>Es cómo la capas de Photoshop o Sketchbook y la disposición de los elementos en el eje z. Un elemento con un z-index mayor se verá sobre los elementos que tengan un menor z-index.[3]<br>
                         </td>
                     </tr>
                     
                     <tr>
-                        <td class="table_text" id="referencias"><strong><hr>REFERENCIAS<hr></strong><br>[1]https://michelletorres.mx/validar-formularios-con-javascript/<br>[2]https://www.clubdelphi.com/foros/showthread.php?t=65438<br>[3]https://www.smashingmagazine.com/2009/07/web-form-validation-best-practices-and-tutorials/<br>
+                        <td class="table_text" id="referencias"><strong><hr>REFERENCIAS<hr></strong><br>[1]https://www.w3schools.com/jsref/prop_style_position.asp<br>[2]https://www.w3schools.com/jsref/prop_style_visibility.asp<br>
+                        [3]https://www.w3schools.com/cssref/pr_pos_z-index.asp<br> 
                         </td>
                     </tr>
                     
@@ -225,7 +230,7 @@
          
         document.getElementById("play_button").onclick=startgame;
          
-         //Esta función hace que las piezas sean dragabble y además crea un set Interval que manda mensajes motivacionales y un SetTimeout que cuenta 30 segundos hasta mandar un mensaje de que se terminó el tiempo, también hace que se terminé el setInterval
+            //Esta función hace que las piezas sean dragabble y además crea un set Interval que manda mensajes motivacionales y un SetTimeout que cuenta 30 segundos hasta mandar un mensaje de que se terminó el tiempo, también hace que se terminé el setInterval
             function startgame(){
                 alert("Mueve las piezas a su respectivos lugares! Tienes 30 segundos!")
                 document.getElementById("drag4").setAttribute('draggable', true);
