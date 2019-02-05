@@ -87,23 +87,24 @@
                     
                     <tr>
                         <td id="images"> DRAG AND DROP PUZZLE<br><br>
-                            <div id="drag4" draggable="true"></div>
-                            <div id="drag5" draggable="true"></div>
-                            <div id="drag6" draggable="true"></div>
+                        <button class="mybuttons" id="play_button"> PLAY </button><br>
+                            <div id="drag4" draggable="false"></div>
+                            <div id="drag5" draggable="false"></div>
+                            <div id="drag6" draggable="false"></div>
                         </td>
                     </tr>
                     <tr>
                         <td id="images">
-                            <div id="drag7" draggable="true"></div>
-                            <div id="drag8" draggable="true"></div>
-                            <div id="drag9" draggable="true"></div>
+                            <div id="drag7" draggable="false"></div>
+                            <div id="drag8" draggable="false"></div>
+                            <div id="drag9" draggable="false"></div>
                         </td>
                     </tr>
                     <tr>
                         <td id="images">
-                            <div id="drag10" draggable="true"></div>
-                            <div id="drag11" draggable="true"></div>
-                            <div id="drag12" draggable="true"></div>
+                            <div id="drag10" draggable="false"></div>
+                            <div id="drag11" draggable="false"></div>
+                            <div id="drag12" draggable="false"></div>
                         </td>
                     </tr>
                     
@@ -211,6 +212,7 @@
         document.getElementById("div8").ondragover=allowDrop;
         document.getElementById("div9").ondragover=allowDrop;
          
+         
         document.getElementById("div1").ondrop=drop;
         document.getElementById("div2").ondrop=drop;
         document.getElementById("div3").ondrop=drop;
@@ -220,6 +222,26 @@
         document.getElementById("div7").ondrop=drop;
         document.getElementById("div8").ondrop=drop;
         document.getElementById("div9").ondrop=drop;
+         
+        document.getElementById("play_button").onclick=startgame;
+         
+         //Esta función hace que las piezas sean dragabble y además crea un set Interval que manda mensajes motivacionales y un SetTimeout que cuenta 30 segundos hasta mandar un mensaje de que se terminó el tiempo, también hace que se terminé el setInterval
+            function startgame(){
+                alert("Mueve las piezas a su respectivos lugares! Tienes 30 segundos!")
+                document.getElementById("drag4").setAttribute('draggable', true);
+                document.getElementById("drag5").setAttribute('draggable', true);
+                document.getElementById("drag6").setAttribute('draggable', true);
+                document.getElementById("drag7").setAttribute('draggable', true);
+                document.getElementById("drag8").setAttribute('draggable', true);
+                document.getElementById("drag9").setAttribute('draggable', true);
+                document.getElementById("drag10").setAttribute('draggable', true);
+                document.getElementById("drag11").setAttribute('draggable', true);
+                document.getElementById("drag12").setAttribute('draggable', true);
+                
+                var interval=setInterval(function(){ alert("Vamos tu puedes!"); }, 10000);
+                var timeout=setTimeout(function(){ clearInterval(interval);alert("¡SE TERMINÓ EL TIEMPO! ¡Lo lograste?"); }, 30000);
+                
+            }
             
             //esta función cambia la posicion del div a de relativa a asoluta. 
             function cambiarpos(){
