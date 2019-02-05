@@ -67,3 +67,75 @@ div.c {
     visibility: visible;
 }
 
+#images {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#drag4,
+#drag5,
+#drag6,
+#drag7,
+#drag8,
+#drag9,
+#drag10,
+#drag11,
+#drag12 {
+  height: 220px;
+  width: 220px;
+  display: inline-block;
+}
+
+#drag4 {
+    background-image: url("img/lana1.jpg");
+}
+
+#drag5 {
+  background-image: url("img/lana2.jpg");
+}
+
+#drag6 {
+  background-image: url("img/lana3.jpg");
+}
+
+#drag7 {
+  background-image: url("img/lana4.jpg");
+}
+
+#drag8 {
+  background-image: url("img/lana5.jpg");
+}
+
+#drag9 {
+  background-image: url("img/lana6.jpg");
+}
+
+#drag10 {
+  background-image: url("img/lana7.jpg");
+}
+
+#drag11 {
+  background-image: url("img/lana8.jpg");
+}
+
+#drag12 {
+  background-image: url("img/lana9.jpg");
+}
+
+#text div {
+  position:relative;
+  height: 200px;
+  width: 200px;
+  border: 1px dashed white;
+  display: inline-block;
+  margin: 0 auto;
+    text-align: center;
+}
+
+#text {
+  width:614px;
+  margin:0 auto;
+    text-align: center;
+}
+

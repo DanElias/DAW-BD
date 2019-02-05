@@ -351,5 +351,17 @@ input{
     font-size: 20px;
 }
 
+#watermark{
+    z-index: 99;
+    position: fixed;
+    width:10%;
+    bottom:0px;
+    left:90%;
+    margin:0 auto;
+    opacity: 0.5;
+}
+
+
+
 
 

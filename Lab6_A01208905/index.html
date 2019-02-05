@@ -15,19 +15,22 @@
         <nav> 
             <ul>
                 <li><a class="active" href="index.html">Home</a></li>
-                <li><a href="passwords.html">Passwords</a></li>
-                <li><a href="tienda.html">Tienda</a></li>
-                <li><a href="reference.html">IEEE Generator</a></li>
+                <li><a href="passwords.html">LOL</a></li>
                 <li><a href="index.html#preguntas">Preguntas</a></li>
                 <li><a href="index.html#referencias">Referencias</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul> 
+            
+            
         </nav>
+        
+       <img src="img/watermark.png" id="watermark" align="left">
         
         <header id="home_header"> 
             <section>
                 <h3>Lab6 DAW</h3>
             </section>
+             
         </header>
         
         
@@ -57,6 +60,75 @@
                             <p class="font3" id="font3">This text is in Bebas and Normal Style with Small Caps120%</p><br>
                             <button class="mybuttons" id="change_fontsize">Change font size</button><br>
                             <button class="mybuttons" id="change_visibility">Change visibility</button><br>
+                            <hr>
+                        </td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <form method="post">
+                                <label class="basiclabel">Introduce un password:</label><br>
+                                <input class="textfield" id="textfield" type="text" name="password" value="">
+                                <br>
+                                <label id="labelmistake"></label>
+                                <br>
+                                <label id="labelsecurity"></label>
+                                <br>
+                                <label class="basiclabel">Reingresa tu password para confirmar:</label><br>
+                                <input class="textfield" id="textfield2" type="textarea" name="confirmar" value="">
+                                <br>
+                                <label id="labelcorrect"></label>
+                                <br>  
+                                <button class="mybuttons" id="botonsubmit">Listo</button>
+                            </form><br><hr><br>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td id="images"> DRAG AND DROP PUZZLE<br><br>
+                            <div id="drag4" draggable="true"></div>
+                            <div id="drag5" draggable="true"></div>
+                            <div id="drag6" draggable="true"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="images">
+                            <div id="drag7" draggable="true"></div>
+                            <div id="drag8" draggable="true"></div>
+                            <div id="drag9" draggable="true"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="images">
+                            <div id="drag10" draggable="true"></div>
+                            <div id="drag11" draggable="true"></div>
+                            <div id="drag12" draggable="true"></div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td id="text">
+                            <br>
+                            <div id="div1"></div>
+                            <div id="div2"></div>
+                            <div id="div3"></div>
+                        </td>
+                    </tr>
+                    
+                     <tr>
+                        <td id="text">
+                            <div id="div4"></div>
+                            <div id="div5"></div>
+                            <div id="div6"></div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td id="text">
+                            <div id="div7"></div>
+                            <div id="div8"></div>
+                            <div id="div9"></div>
                         </td>
                     </tr>
                      
@@ -111,10 +183,43 @@
     </body>
     
      <script type="text/javascript">
-        document.getElementById("change_button").onclick=cambiarpos;
-         document.getElementById("change_fontsize").onmouseover=cambiartamaño;
          
-         document.getElementById("change_visibility").onmouseover=cambiarvisibilidad;
+        document.getElementById("change_button").onclick=cambiarpos;
+        document.getElementById("change_fontsize").onmouseover=cambiartamaño;
+        document.getElementById("change_visibility").onmouseover=cambiarvisibilidad;
+        document.getElementById("textfield").oninput=validar;
+        document.getElementById("textfield2").oninput=validar;
+        document.getElementById("botonsubmit").onclick=valfin;
+         
+        document.getElementById("drag4").ondragstart=drag;
+        document.getElementById("drag5").ondragstart=drag;
+        document.getElementById("drag6").ondragstart=drag;
+        document.getElementById("drag7").ondragstart=drag;
+        document.getElementById("drag8").ondragstart=drag;
+        document.getElementById("drag9").ondragstart=drag;
+        document.getElementById("drag10").ondragstart=drag;
+        document.getElementById("drag11").ondragstart=drag;
+        document.getElementById("drag12").ondragstart=drag;
+         
+        document.getElementById("div1").ondragover=allowDrop;
+        document.getElementById("div2").ondragover=allowDrop;
+        document.getElementById("div3").ondragover=allowDrop;
+        document.getElementById("div4").ondragover=allowDrop;
+        document.getElementById("div5").ondragover=allowDrop;
+        document.getElementById("div6").ondragover=allowDrop;
+        document.getElementById("div7").ondragover=allowDrop;
+        document.getElementById("div8").ondragover=allowDrop;
+        document.getElementById("div9").ondragover=allowDrop;
+         
+        document.getElementById("div1").ondrop=drop;
+        document.getElementById("div2").ondrop=drop;
+        document.getElementById("div3").ondrop=drop;
+        document.getElementById("div4").ondrop=drop;
+        document.getElementById("div5").ondrop=drop;
+        document.getElementById("div6").ondrop=drop;
+        document.getElementById("div7").ondrop=drop;
+        document.getElementById("div8").ondrop=drop;
+        document.getElementById("div9").ondrop=drop;
             
             //esta función cambia la posicion del div a de relativa a asoluta. 
             function cambiarpos(){
@@ -127,7 +232,8 @@
            
             }
          
-         function cambiartamaño(){
+            //esta funcion cambia el tamaño de la letra. Funciona con onmouseover.
+            function cambiartamaño(){
               if(document.getElementById("font1").style.fontSize=="20px"){
                      document.getElementById("font1").style.fontSize="xx-large";
                 }
@@ -136,7 +242,8 @@
                 }
          }
          
-         function cambiarvisibilidad(){
+            //esta funcion cambia la visibilidad de un text. Funciona con onmouseover.
+            function cambiarvisibilidad(){
              if(document.getElementById("font3").style.visibility=="visible"){
                      document.getElementById("font3").style.visibility="hidden";
                 }
@@ -144,6 +251,113 @@
                     document.getElementById("font3").style.visibility="visible";
                 }
          }
+         
+            //función que válida que los caracteres de una contraseña sean válidos. También valida que el "volver a introducir contraseña" sean válido o que las dos comtraseñas coincidan.
+            function validar(){
+                var text;
+                var bandera1=0;
+                var bandera2=0;
+                var bandera3=0;
+                var bandera4=0;
+                var text1;
+                var text2;
+                
+                text=document.getElementById("textfield").value;
+                text1=document.getElementById("textfield").value;
+                text2=document.getElementById("textfield2").value;
+                
+                for(var i=0; i<text.length;i++){
+                    if (text.charCodeAt(i)>=65 && text.charCodeAt(i)<=90) {
+                        bandera1=1;
+                    }
+                    
+                    if( (text.charCodeAt(i)>=33 && text.charCodeAt(i)<=47) || (text.charCodeAt(i)>=58 && text.charCodeAt(i)<=64) || (text.charCodeAt(i)>=91 && text.charCodeAt(i)<=96) || (text.charCodeAt(i)>=123&&text.charCodeAt(i)<=126)){
+                        bandera2=1;
+                    }
+                    
+                    if(text.charAt(i)>=0){
+                        bandera3=1;
+                    }
+                    
+                    if (text.charCodeAt(i)>=97 && text.charCodeAt(i)<=122) {
+                        bandera4=1;
+                    }
+                }
+                
+                if(bandera2==0){
+                    document.getElementById("labelmistake").innerHTML="Te falta poner al menos un caracter especial";
+                }
+                
+                if(bandera3==0){
+                    document.getElementById("labelmistake").innerHTML="Te falta poner al menos un número";
+                }
+                
+                if(bandera1==0){
+                    document.getElementById("labelmistake").innerHTML="Te falta poner al menos una letra mayúscula";
+                }
+                
+                 if(bandera4==0){
+                    document.getElementById("labelmistake").innerHTML="Te falta poner al menos una letra minúscula";
+                }
+                
+                if(bandera1==1||bandera2==1||bandera3==1||bandera4==1){
+                    document.getElementById("labelsecurity").innerHTML="Contraseña insegura";
+                    document.getElementById("labelsecurity").style.color="red";
+                }
+                
+                if(bandera1==0&&bandera2==0&&bandera3==0&&bandera4==0){
+                    document.getElementById("labelsecurity").innerHTML="";
+                }
+                
+                if(bandera1==1&&bandera2==1&&bandera3==1||bandera1==1&&bandera2==1&&bandera4==1||bandera2==1&&bandera3==1&&bandera4==1||bandera1==1&&bandera3==1&&bandera4==1){
+                    document.getElementById("labelsecurity").innerHTML="Contraseña poco segura";
+                    document.getElementById("labelsecurity").style.color="orange";
+                }
+                
+                if(bandera1==1 && bandera2==1 && bandera3==1 && bandera4==1){
+                    document.getElementById("labelmistake").innerHTML="";
+                    document.getElementById("labelsecurity").style.color="limegreen";
+                    document.getElementById("labelsecurity").innerHTML="Contraseña segura!";
+                }
+                
+                
+                if(text1==text2 && text1!="" && text2!=""){
+                    document.getElementById("labelcorrect").style.color="limegreen";
+                    document.getElementById("labelcorrect").innerHTML="Ambas contraseñas coinciden!";
+                }
+                
+                else{
+                    document.getElementById("labelcorrect").style.color="red";
+                    document.getElementById("labelcorrect").innerHTML="Aún no coincide con la contraseña introducida";
+                } 
+            }
+         
+            //funciona que valida si una contraseña es válida.
+            function valfin(){
+              if(document.getElementById("labelcorrect").style.color=="limegreen" && document.getElementById("labelsecurity").style.color=="limegreen"){
+                    alert("CONTRASEÑA VÁLIDA!");
+                }
+             else{
+                    alert("CONTRASEÑA INVÁLIDA");
+             }
+         }  
+         
+            //función que permite el drop del drag and drop
+            function allowDrop(ev) {
+                ev.preventDefault();
+            }
+
+            //función que hace el drag posible (hahaha drag race)
+            function drag(ev) {
+                ev.dataTransfer.setData("text", ev.target.id);
+            }
+            
+            //función que permite que el drop sea posible
+            function drop(ev) {
+                ev.preventDefault();
+                var data = ev.dataTransfer.getData("text");
+                ev.target.appendChild(document.getElementById(data));
+            }
             
         </script>
 </html>
