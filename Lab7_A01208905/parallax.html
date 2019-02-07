@@ -27,18 +27,23 @@
     <body>
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script type="text/javascript" src="js/materialize.js"></script>
-        <script>$(document).ready(function(){
-      $('.parallax').parallax();
-    });</script>
+        <script>
+            $(document).ready(function(){$('.parallax').parallax();});
+            $(document).ready(function(){$('.carousel').carousel();});
+            $('.carousel.carousel-slider').carousel({ullWidth: true,indicators: true});
+            $(document).ready(function(){$('.materialboxed').materialbox();});
+            $(document).ready(function(){$('.tooltipped').tooltip();});
+        
+        </script>
         
         
         <nav>
             <div class="nav-wrapper ">
                 <a href="#" class="brand-logo"><img class="responsive-img" id="logo" src="images/watermark.png"/ width="100"></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down ">
-                    <li><a href="" class="nav_text">Cards</a></li>
-                    <li><a href="" class="nav_text">Gallery</a></li>
-                    <li><a href="" class="nav_text">Tables</a></li>
+                    <li><a href="#about" class="nav_text">About me</a></li>
+                    <li><a href="#art" class="nav_text">Art</a></li>
+                    <li><a href="#projects" class="nav_text">Projects</a></li>
                     <li><a href="" class="nav_text">Etc</a></li>
                 </ul>
             </div>
@@ -59,14 +64,12 @@
             
             <div class="row container">
                 <h2 class="header my_heading_text">Bienvenido ✌</h2>
-                <p class="grey-text text-darken-3 lighten-2 my_normal_text">Mi nombre es Daniel pero mis amigos me llaman Dani o Dan. Tengo 20 años. Me considero una persona muy pacífica, amigable y que siempre estpa dispuesta a ayudar a quien lo necesite. Me gusta ponerme retos y superarme a mi mismo día con día. En está página podrás conocer más sobre mí. </p>
+                <p class="grey-text text-darken-3 lighten-2 my_normal_text">Mi nombre es Daniel pero mis amigos me llaman Dani o Dan. Tengo 20 años. Me considero una persona muy pacífica, amigable y que siempre está dispuesta a ayudar a quien lo necesite. Me gusta ponerme retos y superarme a mi mismo día con día. En está página podrás conocer más sobre mí. </p>
             </div>
         </div>
         
-        <div class="parallax-container my_parallax_container">
-            
+        <div class="parallax-container my_parallax_container" id="about">
             <div class="my_table">
-                
                 <br><br>
                 <div class="row">
                     <div class="col s12 my_table_title hoverable">GET TO KNOW ME! 😉</div>
@@ -75,10 +78,10 @@
                  <div class="row">
                     <div class="col s4">
                         <div class="card hoverable my_card" id="card1">
-                            <div class="card-image">
+                            <div class="card-image materialboxed">
                                 <img src="images/coro.png">
                                 <span class="card-title my_card_title">Música 🎸</span>
-                                <a class="btn-floating halfway-fab waves-effect waves-light green accent-3 hoverable"><i class="material-icons">add</i></a>
+                                <a href="https://soundcloud.com/daneliasb" target=”_blank” class="btn-floating halfway-fab waves-effect waves-light green accent-3 hoverable btn tooltipped" data-position="right" data-tooltip="Visit my SoundCloud account"><i class="material-icons">add</i></a>
                             </div>
                             <div class="card-content">
                                 <p class="card_text">Me gusta tocar piano, guitarra y también estoy en el grupo representativo de coro. Ahora estoy aprendiendo baile folklórico. También he tratado de componer música</p>
@@ -88,10 +91,10 @@
                      
                     <div class="col s4">
                         <div class="card hoverable my_card" id="card2">
-                            <div class="card-image">
+                            <div class="card-image materialboxed">
                                 <img src="images/car.png">
                                 <span class="card-title my_card_title">Arte Digital 🎨</span>
-                                <a class="btn-floating halfway-fab waves-effect waves-light amber darken-1 hoverable"><i class="material-icons">add</i></a>
+                                <a href="https://www.instagram.com/dan.elias_/" target=”_blank”  class="btn-floating halfway-fab waves-effect waves-light amber darken-1 hoverable btn tooltipped" data-position="right" data-tooltip="Visit my Instagram account"><i class="material-icons">add</i></a>
                             </div>
                             <div class="card-content">
                                 <p class="card_text">Me gusta el dibujo digital y en mis ratos libros suelo pintar con acrílicos. Además me gusta tomar fotografías. Uno de mis pasatiempos favoritos es visitar museos con amigos. </p>
@@ -101,24 +104,79 @@
                      
                     <div class="col s4">
                         <div class="card hoverable my_card" id="card3">
-                            <div class="card-image">
+                            <div class="card-image materialboxed">
                                 <img src="images/code.png">
                                 <span class="card-title my_card_title">CODING 🎮</span>
-                                <a class="btn-floating halfway-fab waves-effect waves-light red hoverable"><i class="material-icons">add</i></a>
+                                <a href="https://github.com/DanElias" target=”_blank”  class="btn-floating halfway-fab waves-effect waves-light red hoverable btn tooltipped" data-position="right" data-tooltip="Visit my GitHub account"><i class="material-icons">add</i></a>
                             </div>
                             <div class="card-content">
                                 <p class="card_text">Actualmente estudio Ingeniería en Sistemas Computacionales. Mis áreas favoritas son el desarrollo de videojuegos, páginas web, aplicaciones y realidad virtual.</p>
                             </div>
                         </div>
                     </div>
+                </div><br><br>
+            </div>
+            <div class="parallax"><img src="images/si1.jpg" width="100%" ></div>
+        </div>
+        
+        
+        <div class="parallax-container my_parallax_container" id="art">
+            <div class="my_table">
+                <br>
+                <div class="col s12 my_table_title2 hoverable">Some of my art:</div>
+                <div class="carousel">
+                    <a class="carousel-item" href="#two!"><img src="images/art1.png"></a>
+                    <a class="carousel-item" href="#three!"><img src="images/art3.png"></a>
+                    <a class="carousel-item" href="#four!"><img src="images/art4.png"></a>
+                    <a class="carousel-item" href="#five!"><img src="images/art5.png"></a>
+                    <a class="carousel-item" href="#five!"><img src="images/art6.png"></a>
+                    <a class="carousel-item" href="#five!"><img src="images/art7.png"></a>
                 </div>
                 
+                
+                
             </div>
-            
             <div class="parallax"><img src="images/si4.jpg" width="100%" ></div>
         </div>
         
-        <footer class="page-footer my_footer">
+        
+        <div class="parallax-container my_parallax_container" id="projects" >
+            <div class="my_table">
+                <div class="carousel carousel-slider center">
+                     <div class="carousel-fixed-item center">
+                        <a class="btn waves-effect white grey-text darken-text-2">button</a>
+                    </div>
+                    <div class="carousel-item red white-text" href="#one!">
+                        <h2>First Panel</h2>
+                        <p class="white-text">This is your first panel</p>
+                    </div>
+                    <div class="carousel-item amber white-text" href="#two!">
+                        <h2>Second Panel</h2>
+                        <p class="white-text">This is your second panel</p>
+                    </div>
+                    <div class="carousel-item green white-text" href="#three!">
+                        <h2>Third Panel</h2>
+                        <p class="white-text">This is your third panel</p>
+                    </div>
+                    <div class="carousel-item blue white-text" href="#four!">
+                        <h2>Fourth Panel</h2>
+                        <p class="white-text">This is your fourth panel</p>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            
+            <div class="parallax"><img src="images/si4.jpg" width="100%" ></div>
+            
+            
+        </div>
+        
+        <video class="responsive-video"  width="1" controls   >
+                <source src="mentorit.mp4" type="video/mp4" >
+        </video>
+        
+        <footer class="page-footer my_footer" id="footer">
           <div class="container">
             <div class="row">
               <div class="col l6 s12">

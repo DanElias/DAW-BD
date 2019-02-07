@@ -385,9 +385,15 @@ input{
 
 .my_table_title{
     font-family: Staatliches;
-    font-size: 400%;
-    
+    font-size: 400%;   
 }
+
+.my_table_title2{
+    font-family: Staatliches;
+    font-size: 300%;   
+}
+
+
 
 .my_copyright{
     font-size: 0.8em;
