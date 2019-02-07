@@ -238,10 +238,10 @@ video {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-      transition-timing-function:steps();
+    transition-timing-function:steps();
     will-change: transform;
     background-color: white;
-      will-change:scroll-position;
+    will-change:scroll-position;
     z-index: -3;
     
 }
