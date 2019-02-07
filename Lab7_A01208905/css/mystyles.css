@@ -414,6 +414,12 @@ input{
     vertical-align: bottom;
 }
 
+.carousel_item_text_align{
+    padding: 50px;
+    text-align: justify;
+  text-justify: inter-word;
+}
+
 
 
 
