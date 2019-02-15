@@ -8,7 +8,7 @@
 
     echo tabla_multiplicar();
     
-    phpinfo();
+    //phpinfo();
     
     footer();
 
