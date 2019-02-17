@@ -11,8 +11,6 @@
     
     _lab9cases();
 
-    imprimir_titulo("Esta es la tabla de cuadrados cubos");
-
     _footer();
     
     //phpinfo();//muestra información de php
