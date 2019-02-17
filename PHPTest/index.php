@@ -12,6 +12,6 @@
     _lab9cases();
 
     _footer();
-    
+    //hola
     //phpinfo();//muestra información de php
 ?>
