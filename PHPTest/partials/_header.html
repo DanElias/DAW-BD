@@ -1,3 +1,5 @@
+<!-- Este HTML incluye los links a materialize, su css y js así como las fuentes de google, el jquery y sus inicializaciones-->
+
 <!DOCTYPE html>
 <html>
     
@@ -25,7 +27,15 @@
 
     <body>
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <script type="text/javascript" src="partials/js/materialize.js"></script> 
+        <script type="text/javascript" src="partials/js/materialize.js"></script>
+         <script>
+            $(document).ready(function(){$('.parallax').parallax();}) ;
+            $(document).ready(function(){$('.carousel').carousel();});
+            $('.carousel.carousel-slider').carousel({ullWidth: true,indicators: true});
+            $(document).ready(function(){$('.materialboxed').materialbox();});
+            $(document).ready(function(){$('.tooltipped').tooltip();});
+        
+        </script>
         
         <nav>
             <div class="nav-wrapper ">
