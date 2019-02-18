@@ -1,3 +1,5 @@
+<!-- Este HTML incluye los links a materialize, su css y js así como las fuentes de google, el jquery y sus inicializaciones-->
+
 <!DOCTYPE html>
 <html>
     
@@ -10,33 +12,38 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
         
         <!--Import materialize.css-->
-        <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="partials/css/materialize.css"  media="screen,projection"/>
         
         <!--Esta es mi hoja de estilos css-->
-        <link type="text/css" rel="stylesheet" href="css/mystyles.css"/>
+        <link type="text/css" rel="stylesheet" href="partials/css/mystyles.css"/>
 
         <!--Let browser know website is optimized for mobile-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         
-        <title>📱 Lab 7 DAW </title>
+        <title> Lab 9 DAW </title>
         
         <!--<link rel="shortcut icon" type="image/jpg" href="images/si1.jpg"/>-->
     </head>
 
     <body>
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <script type="text/javascript" src="js/materialize.js"></script> 
+        <script type="text/javascript" src="partials/js/materialize.js"></script>
+         <script>
+            $(document).ready(function(){$('.parallax').parallax();}) ;
+            $(document).ready(function(){$('.carousel').carousel();});
+            $('.carousel.carousel-slider').carousel({ullWidth: true,indicators: true});
+            $(document).ready(function(){$('.materialboxed').materialbox();});
+            $(document).ready(function(){$('.tooltipped').tooltip();});
+        
+        </script>
         
         <nav>
             <div class="nav-wrapper ">
-                <a href="#" class="brand-logo"><img class="responsive-img" id="logo" src="images/watermark.png"/ width="100"></a>
+                <a href="#" class="brand-logo"><img class="responsive-img" id="logo" src="partials/images/watermark.png"/ width="100"></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down ">
-                    <li><a href="#about" class="nav_text">About me</a></li>
-                    <li><a href="#art" class="nav_text">Art</a></li>
-                    <li><a href="#projects" class="nav_text">Projects</a></li>
-                    <li><a href="" class="nav_text">Etc</a></li>
+                    <li><a href="index.php" class="nav_text">Home</a></li>
+                    <li><a href="#about" class="nav_text">Test Cases</a></li>
+                    <li><a href="#preguntas" class="nav_text">Preguntas</a></li>
                 </ul>
             </div>
         </nav>
-    </body>
-</html>
