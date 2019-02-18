@@ -164,7 +164,23 @@
                     </div>
                 </div><br>
                 
+                 <div class="row" id="preguntas"> 
+                    <div class="col s12"> 
+                    <strong>¿Qué hace la función phpinfo()? Describe y discute 3 datos que llamen tu atención?</strong><br><br>Esta función muestra información de php como la configuración, versión, elementos habilitados. Los datos que me llamaron la atención fueron: 1. Que el default time zone es Berlín. Me gustaría saber por qué o sí ahí fue donde crearon PHP. También me llamó la atención que hay una zona que muestra información de mi computadora, hasta de programas que no tienen nada que ver con PHP como Minitab, entonces me pregunto si con phpinfo podría ver la información de los servidores donde están otras páginas web. Y finalmente se me hace una buena idea que hayan puesto los créditos de las personas involucradas en php.  
+                    </div>
+                </div><br>
                 
+                 <div class="row"> 
+                    <div class="col s12"> 
+                    <strong>¿Qué cambios tendrías que hacer en la configuración del servidor para que pudiera ser apto en un ambiente de producción?</strong><br><br>Se debe de tener instalado con software como wamp o xampp que permita tener acceso a programas como Apache, PHP o MySQL. Los proyectos se deben de crear bajo carpetas como htdocs para que puedan ejecutarse. Si se quisiera usar también como un servidor que despliegue páginas o aplicaciones al público primero se debe de encontrar los archivos php.ini. Se deben de realizar cambios en la sección de error handling para que los errores no se muestren al público.[1]
+                    </div>
+                </div><br>
+                
+                 <div class="row"> 
+                    <div class="col s12"> 
+                    <strong>¿Cómo es que si el código está en un archivo con código html que se despliega del lado del cliente, se ejecuta del lado del servidor? Explica</strong><br><br>En un sitio web más dinámico como Facebook, se utiliza PHP para generar contenido desde la base de datos y se transforma en una matriz de datos o un JSON que es solicitado por un script AJAX que se ejecuta en el navegador de los usuarios, esta matriz de datos JSON se convierte en HTML a través de javascript. Los navegadores web ya incluyen la manera de interpretar el HTML para desplegar las páginas web. Si se usa PHP los navegadores no saben interpretarlo, entonces todo se manda al servidor, el servidor interpreta el código y manda como respuesta HTML estático que si puede ser interpretado por el navegador.[2][3] <strong><hr>REFERENCIAS</strong><br><br>[1]https://www.codementor.io/php/tutorial/how-to-setup-php-development-production-server<br><br>[2]https://www.quora.com/How-does-PHP-work-with-HTML<br><br> [3]https://www.quora.com/Why-do-we-need-a-web-server-to-run-PHP-but-not-HTML
+                    </div>
+                </div><br>
             </div>
             <div class="parallax"><img src="partials/images/bg1.jpg" width="100%" ></div>
         </div>
