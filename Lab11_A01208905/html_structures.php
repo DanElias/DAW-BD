@@ -11,7 +11,7 @@
         '<div class="parallax-container z-depth-4">
             <header id="home_header"> 
             <section>
-                <h3 class="my_header_text">Lab 9 DAW</h3>
+                <h3 class="my_header_text">Lab 11 DAW</h3>
             </section>
             </header>
             <div class="parallax ">';
@@ -67,103 +67,25 @@
         echo $parallax_3cols;
     }
 
-    function _lab9cases(){
+    function _lab11cases(){
         $parallax_3cols=
         '
         <div class="parallax-container my_parallax_container" id="about">
             <div class="my_table">
                 <br><br>
                 <div class="row">
-                    <div class="col s12 my_table_title hoverable">Test Cases! 😉</div>
+                    <div class="col s12 my_table_title hoverable">Form de evento!</div>
                 </div>
                 <br>
                 
-                <div class="row"> 
-                    <div class="col s12"> 
-                        Promedio de un arreglo de números 
-                    </div>
-                </div><br>
+                <!-- este es el trigger del form del modal-->
                  <div class="row"> 
                     <div class="col s12"> 
-                        <a class="waves-effect waves-light btn" id="boton_array_average"><i class="material-icons right">touch_app</i>Try it!</a>
+                        <a class="modal-trigger waves-effect waves-light btn  blue hoverable" id="boton_modal_evento" href="#modal1">Agregar Evento<i class="material-icons right">person_add</i></a>  
                     </div>
                 </div><br>
                 
-                <div class="row"> 
-                    <div class="col s12" id="array_average"> 
-                        
-                    </div>
-                </div><br>
-                
-                <div class="row"> 
-                    <div class="col s12"> 
-                        Mediana de un arreglo de números 
-                    </div>
-                </div><br>
-                <div class="row">
-                    <div class="col s12">
-                        <a class="waves-effect waves-light btn" id="boton_array_median"><i class="material-icons right">touch_app</i>Try it!</a>
-                    </div>
-                </div><br>
-                
-                 <div class="row"> 
-                    <div class="col s12" id="array_median"> 
-                        
-                    </div>
-                </div><br>
-                
-                <div class="row"> 
-                    <div class="col s12"> 
-                        Análisis de un arreglo de números 
-                    </div>
-                </div><br>
-                <div class="row">
-                    <div class="col s12">
-                        <a class="waves-effect waves-light btn" id="boton_array_analisis"><i class="material-icons right">touch_app</i>Try it!</a>
-                    </div>
-                </div><br>
-                
-                
-                 <div class="row"> 
-                    <div class="col s12" id="array_analisis"> 
-                        
-                    </div>
-                </div><br>
-                
-                <div class="row"> 
-                    <div class="col s12"> 
-                        Tabla de cuadrados y cubos
-                    </div>
-                </div><br>
-                <div class="row">
-                    <div class="col s12">
-                        <a class="waves-effect waves-light btn" id="boton_cuadrados_cubos"><i class="material-icons right">touch_app</i>Try it!</a>
-                    </div>
-                </div><br>
-                
-                <div class="row"> 
-                    <div class="col s12" id="cuadrados_cubos"> 
-                        
-                    </div>
-                </div><br>
-                
-                <div class="row"> 
-                    <div class="col s12"> 
-                        Almost Lucky <br>Petya loves lucky numbers. We all know that lucky numbers are the positive integers whose decimal representations contain only the lucky digits 4 and 7. For example, numbers 47, 744, 4 are lucky and 5, 17, 467 are not. Unfortunately, not all numbers are lucky. Petya calls a number nearly lucky if the number of lucky digits in it is a lucky number. He wonders whether number n is a nearly lucky number. Print if the numbers is nearly a lukcy number.
-                    </div>
-                </div><br>
-                <div class="row">
-                    <div class="col s12">
-                        <a class="waves-effect waves-light btn" id="boton_acmproblem"><i class="material-icons right">touch_app</i>Try it!</a>
-                    </div>
-                </div><br>
-                
-                 <div class="row"> 
-                    <div class="col s12" id="acmproblem"> 
-                        
-                    </div>
-                </div><br>
-                
+                <!-- estas son las preguntas que se contestan en cada lab-->
                  <div class="row" id="preguntas"> 
                     <div class="col s12"> 
                     <strong>¿Qué hace la función phpinfo()? Describe y discute 3 datos que llamen tu atención?</strong><br><br>Esta función muestra información de php como la configuración, versión, elementos habilitados. Los datos que me llamaron la atención fueron: 1. Que el default time zone es Berlín. Me gustaría saber por qué o sí ahí fue donde crearon PHP. También me llamó la atención que hay una zona que muestra información de mi computadora, hasta de programas que no tienen nada que ver con PHP como Minitab, entonces me pregunto si con phpinfo podría ver la información de los servidores donde están otras páginas web. Y finalmente se me hace una buena idea que hayan puesto los créditos de las personas involucradas en php.  
@@ -196,5 +118,15 @@
     function imprimir_titulo($titulo) {
         echo "<h1>$titulo</h1>";
     }
+
+    function _modal_form(){
+        include("partials/_modal1.html");
+    }
+
+    function _modal_confirm(){
+        include("partials/_modal_confirm.html");
+    }
+
+    
 
 ?>

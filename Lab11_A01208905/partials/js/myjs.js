@@ -54,3 +54,5 @@
             });
             
         });
+
+$('#modal1').openModal({dismissible:false});  
