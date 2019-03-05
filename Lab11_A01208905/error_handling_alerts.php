@@ -1,13 +1,14 @@
 
  <?php if(isset($error)): ?>
     <!--En este php lo que se hace es crear un alert box que el usuario puede cerrar después de haber visto los errores que hizo-->
+        <br>
         <div class="row" id="alert_box">
           <div class="col s12 m12">
             <div class="card red darken-1">
               <div class="row">
                 <div class="col s12 m10">
                   <div class="card-content white-text">
-                    <p><?= "1. ".$error ?></p>
+                    <p><?=$error ?></p>
                 </div>
               </div>
               <div class="col s12 m2">

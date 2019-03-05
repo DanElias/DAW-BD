@@ -88,21 +88,34 @@
                 <!-- estas son las preguntas que se contestan en cada lab-->
                  <div class="row" id="preguntas"> 
                     <div class="col s12"> 
-                    <strong>¿Qué hace la función phpinfo()? Describe y discute 3 datos que llamen tu atención?</strong><br><br>Esta función muestra información de php como la configuración, versión, elementos habilitados. Los datos que me llamaron la atención fueron: 1. Que el default time zone es Berlín. Me gustaría saber por qué o sí ahí fue donde crearon PHP. También me llamó la atención que hay una zona que muestra información de mi computadora, hasta de programas que no tienen nada que ver con PHP como Minitab, entonces me pregunto si con phpinfo podría ver la información de los servidores donde están otras páginas web. Y finalmente se me hace una buena idea que hayan puesto los créditos de las personas involucradas en php.  
+                    <strong>¿Por qué es una buena práctica separar el controlador de la vista?
+                    </strong><br><br>Porque de esta manera tienes más control sobre lo que se está incluyendo en el código. De esta manera tenemos todo más organizado y sabes qué es lo que en verdad se está enviando al servidor y lo que esté está regresando y validando.
                     </div>
                 </div><br>
                 
                  <div class="row"> 
                     <div class="col s12"> 
-                    <strong>¿Qué cambios tendrías que hacer en la configuración del servidor para que pudiera ser apto en un ambiente de producción?</strong><br><br>Se debe de tener instalado con software como wamp o xampp que permita tener acceso a programas como Apache, PHP o MySQL. Los proyectos se deben de crear bajo carpetas como htdocs para que puedan ejecutarse. Si se quisiera usar también como un servidor que despliegue páginas o aplicaciones al público primero se debe de encontrar los archivos php.ini. Se deben de realizar cambios en la sección de error handling para que los errores no se muestren al público.[1]
+                    <strong>Aparte de los arreglos $_POST y $_GET, ¿qué otros arreglos están predefinidos en php y cuál es su función?
+                    </strong><br><br>$GLOBALS: contiene una referencia a cada variable que tiene un scope global en el código.<br><br>$_SERVER: tiene información de la dirección de headers, scripts y paths.<br><br>$_FILES: los items que han sido cargados al script a través del Post.<br><br>$_REQUEST: tiene los contenidos de $_GET, $_POST, $_COOKIE<br><br>$_SESSION: tiene las variables de sesión<br><br>$_PHP_SELF: tiene el nombre del archivo php que lo contiene.<br><br>$php_errormsg: Tiene el texto del último error generado por el PHP
                     </div>
                 </div><br>
                 
                  <div class="row"> 
                     <div class="col s12"> 
-                    <strong>¿Cómo es que si el código está en un archivo con código html que se despliega del lado del cliente, se ejecuta del lado del servidor? Explica</strong><br><br>En un sitio web más dinámico como Facebook, se utiliza PHP para generar contenido desde la base de datos y se transforma en una matriz de datos o un JSON que es solicitado por un script AJAX que se ejecuta en el navegador de los usuarios, esta matriz de datos JSON se convierte en HTML a través de javascript. Los navegadores web ya incluyen la manera de interpretar el HTML para desplegar las páginas web. Si se usa PHP los navegadores no saben interpretarlo, entonces todo se manda al servidor, el servidor interpreta el código y manda como respuesta HTML estático que si puede ser interpretado por el navegador.[2][3] <strong><hr>REFERENCIAS</strong><br><br>[1]https://www.codementor.io/php/tutorial/how-to-setup-php-development-production-server<br><br>[2]https://www.quora.com/How-does-PHP-work-with-HTML<br><br> [3]https://www.quora.com/Why-do-we-need-a-web-server-to-run-PHP-but-not-HTML
+                    <strong>Explora las funciones de php, y describe 2 que no hayas visto en otro lenguaje y que llamen tu atención?</strong><br><br>array_key_exists(): devuelve true si la llave está en el array. Es cualquier valor posible para índice de un array.
+                    method_exists(): devuelve true si el objeto dado tiene el método que se está buscando.[2]
                     </div>
                 </div><br>
+                
+                <div class="row" id="preguntas"> 
+                    <div class="col s12"> 
+                    <strong>¿Qué es XSS y cómo se puede prevenir?
+                    </strong><br><br>Cross-Site Scripting Attacks
+                    Es agregar código malicioso para ser ejecutado en los sitios web. Puede ser como un hyperlink que lleve al usuario a otro sitio. La pantalla del sitio será muy similar y el usuario no se dará cuenta de que es otro sitio y mandará sus datos. Con XSS se incluyen etiquetas script que cambian la ejecución del sitio.
+                    Con htmlspecialchars se filtra la salida del contenido que se muestra en el navegador. También puede usarse html entities.[3]<br><br>[1]https://www.tutorialspoint.com/php/php_predefined_variables.htm<br>[2]https://www.exakat.io/top-100-php-functions/<br>[3]https://manuais.iessanclemente.net/index.php/Evitar_ataques_XSS_y_CSRF_con_PHP
+                    </div>
+                </div><br>
+                
             </div>
             <div class="parallax"><img src="partials/images/bg1.jpg" width="100%" ></div>
         </div>
