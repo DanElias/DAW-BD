@@ -358,10 +358,23 @@ input{
     text-align: center;
 }
 
+.my_table2{
+    background-color: rgba(63, 127, 191, 0.7);
+    height: auto;
+    height: 100%;
+    font-family: Ubuntu;
+    color: white;
+    font-size: 1.5em;
+    align-content: center;
+    text-align: center;
+    padding: 1em;
+    margin: 1em;
+}
+
 .my_data_table{
     margin: 20px;
     table-layout: fixed;
-width: 100%;
+    width: 100%;
 }
 
 .my_parallax_container{
@@ -568,6 +581,13 @@ width: 100%;
 
 .my_alert{
     z-index: 999 !important;
+}
+
+
+.flexbox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 

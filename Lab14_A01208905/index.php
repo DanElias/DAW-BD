@@ -18,9 +18,9 @@
     
     _parallax("partials/images/si5.jpg");
     
-    _simple_white_section("LAB 13 DAW", "Lab de Manejo de Sesiones con PHP :)");
+    _simple_white_section("LAB 14 DAW", "Conexion y Consultas a Base de Datos con PHP y SQL :)");
 
-    _lab13cases();
+    _lab14cases();
 
     _form_sesion();
 

@@ -15,7 +15,7 @@
         '<div class="parallax-container z-depth-4">
             <header id="home_header"> 
             <section>
-                <h3 class="my_header_text">Lab 13 DAW</h3>
+                <h3 class="my_header_text">Lab 14 DAW</h3>
             </section>
             </header>
             <div class="parallax ">';
@@ -52,6 +52,17 @@
         echo $white_section;
     }
 
+    function _simple_white_section_table($title, $description){
+        $white_section=
+        '<div class="section white">
+            <div class="row container">
+                <h2 class="header my_heading_text">'.$title.'</h2>'.$description.'<br><br>
+            </div>
+        </div>';
+        echo $white_section;
+    }
+
+
     //Con esta función se crea una sección parallax pero con 3 columnas disponbles para información encima de la foto de fondo para un desplegado de información atractivo
     function _parallax_three_columns(){
         $parallax_3cols=
@@ -84,63 +95,100 @@
         echo $parallax_3cols;
     }
 
-    function _lab13cases(){
+    function _lab14cases(){
         $parallax_3cols=
         '
         <div class="parallax-container my_parallax_container" id="about">
             <div class="my_table">
                 <br><br>
+                
                 <div class="row">
-                    <div class="col s12 my_table_title hoverable">¡Inicia sesión!</div>
+                    <div class="col s12 my_table_title hoverable">¡Mostrar Eventos!</div>
                 </div>
                 <br>
                 
-                <!-- este es el trigger del form del modal-->
-                 <div class="row"> 
-                    <div class="col s12"> 
-                        <a class="modal-trigger waves-effect waves-light btn  blue hoverable" id="boton_form_sesion" href="#_form_sesion">Iniciar sesión<i class="material-icons right">person_add</i></a>  
+                <form class="col s12" action="_eventos_todo_query.php" method="post">
+                    <div class="my_modal_buttons">
+                        <div class="row">
+                            <div class="col s12">
+                            <button class="btn waves-effect waves-light blue" type="submit" name="submit">Mostrar Eventos
+                                <i class="material-icons right">check_circle_outline</i>
+                            </button>
+                            </div>
+                        </div>
                     </div>
-                </div><br>
+                </form><br>
                 
-                <br><br>
                 <div class="row">
-                    <div class="col s12 my_table_title hoverable">¡Sube una Imagen!</div>
+                    <div class="col s12 my_table_title hoverable">¡Buscar Evento por Nombre!</div>
                 </div>
                 <br>
                 
-                <!-- este es el trigger del form del modal-->
-                 <div class="row"> 
-                    <div class="col s12"> 
-                        <a class="modal-trigger waves-effect waves-light btn amber hoverable" id="boton_form_subir_imagen" href="#_form_subir_imagen">Subir imagen<i class="material-icons right">arrow_upward</i></a>  
+              
+                <form class="col s12 center-align" action="_eventos_nombre_query.php" method="post">
+                    <div class="row center-align">
+                        <div class="input-field col s12 center-align">
+                          <i class="material-icons prefix">event</i>
+                          <input  type="text" class="validate" name="nombre_evento" required>
+                          <label>Nombre del evento</label>
+                        </div>
                     </div>
-                </div><br>
+                            
+                    <div class="my_modal_buttons center-align">
+                        <div class="row center-align">
+                            <div class="col s12 center-align">
+                            <button class="btn waves-effect waves-light blue" type="submit" name="submit">Buscar Evento
+                                <i class="material-icons right">check_circle_outline</i>
+                            </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <br>
                 
+                <div class="row">
+                    <div class="col s12 my_table_title hoverable">¡Buscar Evento por Fecha Exacta!</div>
+                </div>
+                <br>
+                
+                <form class="col s12 center-align" action="_eventos_fecha_query.php" method="post">
+                    <div class="row center-align">
+                        <div class="input-field col s12">
+                          <i class="material-icons prefix">calendar_today</i>
+                        <input type="date" name="fecha_evento" required>
+                        </div> 
+                    </div>
+                            
+                    <div class="my_modal_buttons center-align">
+                        <div class="row center-align">
+                            <div class="col s12 center-align">
+                            <button class="btn waves-effect waves-light blue" type="submit" name="submit">Buscar Evento
+                                <i class="material-icons right">check_circle_outline</i>
+                            </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <br>
+
                 <!-- estas son las preguntas que se contestan en cada lab-->
                  <div class="row" id="preguntas"> 
                     <div class="col s12"> 
-                    <strong>¿Por qué es importante hacer un session_unset() y luego un session_destroy()?
-                    </strong><br><br>Se necesita para que se borre el valor de las variables de sesión y para que el array de sesión se vacíe o se destruya. De esta manera al dar cerrar sesión se asegura que no se guarde nada de información que pueda ser usada de manera maliciosas por otras personas.[1]
+                    <strong>¿Qué es ODBC y para qué es útil?
+                    </strong><br><br>Open Data Base Connectivity. Se utiliza cuando por ejemplo queremos comunicarnos con diferentes Bases de Datos basadas en diferentes DBMS como Access o SQL. El ODBC provee de unas caracteríisticas siempre homogéneas, y por el otro permite distintos controladores que aseguran la conectividad de la aplicación con diferentes bases de datos. Casi todas las DB actuales tienen un ODBC.[1]
                     </div>
                 </div><br>
                 
                  <div class="row"> 
                     <div class="col s12"> 
-                    <strong>¿Cuál es la diferencia entre una variable de sesión y una cookie?
-                    </strong><br><br>Una cookie es  información almacenada por el navegador y enviada al servidor en cada request. SESSION es un array de datos almacenados en el servidor y asociados con un usuario determinado (generalmente a través de una cookie que contiene un código de identificación). [2]
+                    <strong>¿Qué es SQL Injection?
+                    </strong><br><br>Es una vulnerabilidad que permite al atacante enviar o “inyectar” instrucciones SQL de forma maliciosa y malintencionada dentro del código SQL programado para la manipulación de bases de datos, de esta forma todos los datos almacenados estarían en peligro[2]
                     </div>
                 </div><br>
                 
                  <div class="row"> 
                     <div class="col s12"> 
-                    <strong>¿Qué técnicas se utilizan en sitios como facebook para que el usuario no sobreescriba sus fotos en el sistema de archivos cuando sube una foto con el mismo nombre?</strong><br><br>Lo que facebook hace es que a cada foto que se sube se le asigna un identificador único, en realidad la foto en los servidores de facebook ya no tiene el mismo nombre que tenía la foto cuando la subiste.
-                    </div>
-                </div><br>
-                
-                <div class="row" id="preguntas"> 
-                    <div class="col s12"> 
-                    <strong>¿Qué es CSRF y cómo puede prevenirse?
-                    </strong><br><br>Cross-Site Scripting Attacks
-                   Cross Site Request Forgery.Para que se pueda llevar a cabo un ataque mediante CSRF, en primera instancia, el atacante debe conseguir vulnerar e ingresar código HTML en un determinado servidor que podemos llamar “A”. Por otro lado, la víctima establece una conexión legÍtima con una aplicación web en otro servidor, que llamaremos “B” La víctima accede a la aplicación web donde se encuentra el código introducido por el atacante. El navegador de la víctima realiza una petición contra la aplicación del servidor web “B” sin que el usuario se entere. Para prevenirse lo que se puede hacer es que el usuario no guarde contraseñas de usuarios, o use el modo incógnito. Cerrar la sesión del usuario cuando esta ya no sea utilizada después de cierto tiempo. Bloquear que los POST no se envíen de manera automática sin antes preguntar al usuario[3]<br><br>[1]https://www.tutorialspoint.com/php/php_sessions.htm<br>[2]https://stackoverflow.com/questions/6339783/what-is-the-difference-between-sessions-and-cookies-in-php<br>[3]https://www.welivesecurity.com/la-es/2015/04/21/vulnerabilidad-cross-site-request-forgery-csrf/
+                    <strong>¿Qué técnicas puedes utilizar para evitar ataques de SQL Injection?</strong><br><br>No utilizar las funciones de sql, si no las de sqli. Siempre checar que el texto ingresado sea del tipo que se espera. Poner restricciones para que no se puedan nunca realizar ciertas acciones como borrar una tabla completa. No mostrar al usuario información de error generada. Rechazar peticiones que tengan caracteres sospechosos como ; ‘ - /**/ xp_ [3]<br><br><br>[1]https://www.uv.es/jac/guia/gestion/gestion3.htm<br>[2]https://openwebinars.net/blog/que-es-sql-injection/<br>[3]https://geeks.ms/gtorres/2010/10/29/tips-para-evitar-sql-injection/
                     </div>
                 </div><br>
                 
