@@ -26,6 +26,18 @@
         echo $parallax_container;
     }
 
+    function _parallax_simple($image_url){
+        $parallax_container=
+        '<div class="parallax-container z-depth-4">
+            <header id="home_header"> 
+            </header>
+            <div class="parallax ">';
+          $parallax_container.='<img src="'.$image_url.'"width="100%" >
+            </div>
+        </div>';
+        echo $parallax_container;
+    }
+
     //Con esta función creo una sección en blanco simple con un título y descripción
     function _simple_white_section($title, $description){
         $white_section=
@@ -90,6 +102,19 @@
                     </div>
                 </div><br>
                 
+                <br><br>
+                <div class="row">
+                    <div class="col s12 my_table_title hoverable">¡Sube una Imagen!</div>
+                </div>
+                <br>
+                
+                <!-- este es el trigger del form del modal-->
+                 <div class="row"> 
+                    <div class="col s12"> 
+                        <a class="modal-trigger waves-effect waves-light btn amber hoverable" id="boton_form_subir_imagen" href="#_form_subir_imagen">Subir imagen<i class="material-icons right">arrow_upward</i></a>  
+                    </div>
+                </div><br>
+                
                 <!-- estas son las preguntas que se contestan en cada lab-->
                  <div class="row" id="preguntas"> 
                     <div class="col s12"> 
@@ -143,6 +168,10 @@
     
     function _form_sesion(){
         include("partials/_form_sesion.html");
+    }
+    
+    function _form_subir_imagen(){
+        include("partials/_form_subir_imagen.html");
     }
 
     function _modal_confirm(){

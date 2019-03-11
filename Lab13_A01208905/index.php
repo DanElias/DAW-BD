@@ -24,5 +24,7 @@
 
     _form_sesion();
 
+    _form_subir_imagen();
+
     _footer();
 ?>
