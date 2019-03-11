@@ -118,31 +118,29 @@
                 <!-- estas son las preguntas que se contestan en cada lab-->
                  <div class="row" id="preguntas"> 
                     <div class="col s12"> 
-                    <strong>¿Por qué es una buena práctica separar el controlador de la vista?
-                    </strong><br><br>Porque de esta manera tienes más control sobre lo que se está incluyendo en el código. De esta manera tenemos todo más organizado y sabes qué es lo que en verdad se está enviando al servidor y lo que esté está regresando y validando.
+                    <strong>¿Por qué es importante hacer un session_unset() y luego un session_destroy()?
+                    </strong><br><br>Se necesita para que se borre el valor de las variables de sesión y para que el array de sesión se vacíe o se destruya. De esta manera al dar cerrar sesión se asegura que no se guarde nada de información que pueda ser usada de manera maliciosas por otras personas.[1]
                     </div>
                 </div><br>
                 
                  <div class="row"> 
                     <div class="col s12"> 
-                    <strong>Aparte de los arreglos $_POST y $_GET, ¿qué otros arreglos están predefinidos en php y cuál es su función?
-                    </strong><br><br>$GLOBALS: contiene una referencia a cada variable que tiene un scope global en el código.<br><br>$_SERVER: tiene información de la dirección de headers, scripts y paths.<br><br>$_FILES: los items que han sido cargados al script a través del Post.<br><br>$_REQUEST: tiene los contenidos de $_GET, $_POST, $_COOKIE<br><br>$_SESSION: tiene las variables de sesión<br><br>$_PHP_SELF: tiene el nombre del archivo php que lo contiene.<br><br>$php_errormsg: Tiene el texto del último error generado por el PHP
+                    <strong>¿Cuál es la diferencia entre una variable de sesión y una cookie?
+                    </strong><br><br>Una cookie es  información almacenada por el navegador y enviada al servidor en cada request. SESSION es un array de datos almacenados en el servidor y asociados con un usuario determinado (generalmente a través de una cookie que contiene un código de identificación). [2]
                     </div>
                 </div><br>
                 
                  <div class="row"> 
                     <div class="col s12"> 
-                    <strong>Explora las funciones de php, y describe 2 que no hayas visto en otro lenguaje y que llamen tu atención?</strong><br><br>array_key_exists(): devuelve true si la llave está en el array. Es cualquier valor posible para índice de un array.
-                    method_exists(): devuelve true si el objeto dado tiene el método que se está buscando.[2]
+                    <strong>¿Qué técnicas se utilizan en sitios como facebook para que el usuario no sobreescriba sus fotos en el sistema de archivos cuando sube una foto con el mismo nombre?</strong><br><br>Lo que facebook hace es que a cada foto que se sube se le asigna un identificador único, en realidad la foto en los servidores de facebook ya no tiene el mismo nombre que tenía la foto cuando la subiste.
                     </div>
                 </div><br>
                 
                 <div class="row" id="preguntas"> 
                     <div class="col s12"> 
-                    <strong>¿Qué es XSS y cómo se puede prevenir?
+                    <strong>¿Qué es CSRF y cómo puede prevenirse?
                     </strong><br><br>Cross-Site Scripting Attacks
-                    Es agregar código malicioso para ser ejecutado en los sitios web. Puede ser como un hyperlink que lleve al usuario a otro sitio. La pantalla del sitio será muy similar y el usuario no se dará cuenta de que es otro sitio y mandará sus datos. Con XSS se incluyen etiquetas script que cambian la ejecución del sitio.
-                    Con htmlspecialchars se filtra la salida del contenido que se muestra en el navegador. También puede usarse html entities.[3]<br><br>[1]https://www.tutorialspoint.com/php/php_predefined_variables.htm<br>[2]https://www.exakat.io/top-100-php-functions/<br>[3]https://manuais.iessanclemente.net/index.php/Evitar_ataques_XSS_y_CSRF_con_PHP
+                   Cross Site Request Forgery.Para que se pueda llevar a cabo un ataque mediante CSRF, en primera instancia, el atacante debe conseguir vulnerar e ingresar código HTML en un determinado servidor que podemos llamar “A”. Por otro lado, la víctima establece una conexión legÍtima con una aplicación web en otro servidor, que llamaremos “B” La víctima accede a la aplicación web donde se encuentra el código introducido por el atacante. El navegador de la víctima realiza una petición contra la aplicación del servidor web “B” sin que el usuario se entere. Para prevenirse lo que se puede hacer es que el usuario no guarde contraseñas de usuarios, o use el modo incógnito. Cerrar la sesión del usuario cuando esta ya no sea utilizada después de cierto tiempo. Bloquear que los POST no se envíen de manera automática sin antes preguntar al usuario[3]<br><br>[1]https://www.tutorialspoint.com/php/php_sessions.htm<br>[2]https://stackoverflow.com/questions/6339783/what-is-the-difference-between-sessions-and-cookies-in-php<br>[3]https://www.welivesecurity.com/la-es/2015/04/21/vulnerabilidad-cross-site-request-forgery-csrf/
                     </div>
                 </div><br>
                 
