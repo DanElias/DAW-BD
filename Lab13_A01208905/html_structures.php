@@ -5,13 +5,17 @@
         include("partials/_header.html");
     }
 
+    function _header_user() {
+        include("partials/_header_user.html");
+    }
+
     //Con esta función puedo crear todos los contenedores parallax que yo quiera solo llamando a la función y mandándole el url de la imagen, que comunmente estaran en /partials/images/
     function _parallax($image_url){
         $parallax_container=
         '<div class="parallax-container z-depth-4">
             <header id="home_header"> 
             <section>
-                <h3 class="my_header_text">Lab 11 DAW</h3>
+                <h3 class="my_header_text">Lab 13 DAW</h3>
             </section>
             </header>
             <div class="parallax ">';
@@ -29,6 +33,7 @@
             <div class="row container">
                 <h2 class="header my_heading_text">'.$title.'</h2>
                 <p class="grey-text text-darken-3 lighten-2 my_normal_text">'.$description.'</p>
+                <br><br>
             </div>
         </div>';
             
@@ -67,21 +72,21 @@
         echo $parallax_3cols;
     }
 
-    function _lab11cases(){
+    function _lab13cases(){
         $parallax_3cols=
         '
         <div class="parallax-container my_parallax_container" id="about">
             <div class="my_table">
                 <br><br>
                 <div class="row">
-                    <div class="col s12 my_table_title hoverable">Form de evento!</div>
+                    <div class="col s12 my_table_title hoverable">¡Inicia sesión!</div>
                 </div>
                 <br>
                 
                 <!-- este es el trigger del form del modal-->
                  <div class="row"> 
                     <div class="col s12"> 
-                        <a class="modal-trigger waves-effect waves-light btn  blue hoverable" id="boton_modal_evento" href="#modal1">Agregar Evento<i class="material-icons right">person_add</i></a>  
+                        <a class="modal-trigger waves-effect waves-light btn  blue hoverable" id="boton_form_sesion" href="#_form_sesion">Iniciar sesión<i class="material-icons right">person_add</i></a>  
                     </div>
                 </div><br>
                 
@@ -132,8 +137,12 @@
         echo "<h1>$titulo</h1>";
     }
 
-    function _modal_form(){
-        include("partials/_modal1.html");
+    function _form_evento(){
+        include("partials/_form_evento.html");
+    }
+    
+    function _form_sesion(){
+        include("partials/_form_sesion.html");
     }
 
     function _modal_confirm(){

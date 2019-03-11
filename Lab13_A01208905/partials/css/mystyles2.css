@@ -566,5 +566,9 @@ width: 100%;
     cursor:pointer; 
 }
 
+.my_alert{
+    z-index: 999 !important;
+}
+
 
 

@@ -2,7 +2,7 @@
  <?php if(isset($error)): ?>
     <!--En este php lo que se hace es crear un alert box que el usuario puede cerrar después de haber visto los errores que hizo-->
         <br>
-        <div class="row" id="alert_box">
+        <div class="row my_alert" id="alert_box">
           <div class="col s12 m12">
             <div class="card red darken-1">
               <div class="row">

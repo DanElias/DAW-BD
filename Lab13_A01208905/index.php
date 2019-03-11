@@ -3,18 +3,26 @@
     require_once("html_structures.php");
     require_once("logical_functions.php");
 
-    _header();
+    if (session_status() == PHP_SESSION_NONE){ // como vuelvo a llamar a este php, solo debo inicializar $_SESSION[] una vez
+        session_start();
+    }
 
+    if(isset($_SESSION["usuario"])){
+        _header_user();
+    }
+    else{
+        _header();
+    }
+    
     include("error_handling_alerts.php");
     
     _parallax("partials/images/si5.jpg");
     
-    _simple_white_section("LAB 11 DAW", "Toda la estructura de esta página funciona con PHP :)");
+    _simple_white_section("LAB 13 DAW", "Lab de Manejo de Sesiones con PHP :)");
 
-    _lab11cases();
+    _lab13cases();
 
-    _modal_form();
-    _modal_confirm();
+    _form_sesion();
 
     _footer();
 ?>

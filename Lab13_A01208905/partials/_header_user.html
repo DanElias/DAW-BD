@@ -54,11 +54,13 @@
         
         <nav>
             <div class="nav-wrapper ">
-                <a href="#" class="brand-logo"><img class="responsive-img" id="logo" src="partials/images/watermark.png" width="100"></a>
+                <a href="#" class="brand-logo"><img class="responsive-img" id="logo" src="partials/images/watermark.png"/ width="100"></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down ">
                     <li><a href="index.php" class="nav_text">Home</a></li>
                     <li><a href="#about" class="nav_text">Test Cases</a></li>
                     <li><a href="#preguntas" class="nav_text">Preguntas</a></li>
+                    <li><a class="nav_text"><?=$_SESSION["usuario"]?></a></li>
+                    <li><a href="_cerrar_sesion.php" class="nav_text">Cerrar Sesion</a></li>
                 </ul>
             </div>
         </nav>
