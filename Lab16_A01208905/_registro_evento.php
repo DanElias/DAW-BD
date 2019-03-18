@@ -17,9 +17,6 @@
                 // si no hay errores entonces mostrar pantalla de éxito
                 if(!checkmydate($error) && !is_numeric($_POST["nombre_evento"]) && !is_numeric($_POST["descripcion_evento"]) && !is_numeric($_POST["lugar_evento"])){
                     include("partials/_header.html"); // se vuelve a cargar una página
-                    include("partials/_modal1.html");
-                    _modal_confirm();
-                    _modal_form();
                     $input_date2 = $_POST["fecha_evento"];//Las fechas se guardan como 1998-03-28
                     $test_date2  = explode('-', $input_date2);
                     // html special chars se utiliza para evitar ataques Cross Site Scripting

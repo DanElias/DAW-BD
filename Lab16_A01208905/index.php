@@ -18,9 +18,11 @@
     
     _parallax("partials/images/si5.jpg");
     
-    _simple_white_section("LAB 14 DAW", "Conexion y Consultas a Base de Datos con PHP y SQL :)");
+    _simple_white_section("LAB 16 DAW", "Registros y Consultas en BD con SQL PHP :)");
 
-    _lab14cases();
+    _lab16cases();
+
+    _form_evento();
 
     _form_sesion();
 

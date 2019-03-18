@@ -15,7 +15,7 @@
         '<div class="parallax-container z-depth-4">
             <header id="home_header"> 
             <section>
-                <h3 class="my_header_text">Lab 14 DAW</h3>
+                <h3 class="my_header_text">Lab 16 DAW</h3>
             </section>
             </header>
             <div class="parallax ">';
@@ -95,12 +95,25 @@
         echo $parallax_3cols;
     }
 
-    function _lab14cases(){
+    function _lab16cases(){
         $parallax_3cols=
         '
         <div class="parallax-container my_parallax_container" id="about">
             <div class="my_table">
                 <br><br>
+                
+                
+                <div class="row">
+                    <div class="col s12 my_table_title hoverable">¡Registra un evento nuevo!</div>
+                </div>
+                <br>
+                
+                <!-- este es el trigger del form del modal-->
+                 <div class="row"> 
+                    <div class="col s12"> 
+                        <a class="modal-trigger waves-effect waves-light btn  blue hoverable" id="boton_modal_evento" href="#modal1">Agregar Evento<i class="material-icons right">person_add</i></a>  
+                    </div>
+                </div><br>
                 
                 <div class="row">
                     <div class="col s12 my_table_title hoverable">¡Mostrar Eventos!</div>
