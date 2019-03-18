@@ -18,7 +18,7 @@
     
     _parallax("partials/images/si5.jpg");
     
-    _simple_white_section("LAB 16 DAW", "Registros y Consultas en BD con SQL PHP :)");
+    _simple_white_section("LAB 16 DAW PRUEBA CON C9", "Registros y Consultas en BD con SQL PHP :)");
 
     _lab16cases();
 
