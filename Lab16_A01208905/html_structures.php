@@ -187,8 +187,8 @@
                 <!-- estas son las preguntas que se contestan en cada lab-->
                  <div class="row" id="preguntas"> 
                     <div class="col s12"> 
-                    <strong>¿Qué es ODBC y para qué es útil?
-                    </strong><br><br>Open Data Base Connectivity. Se utiliza cuando por ejemplo queremos comunicarnos con diferentes Bases de Datos basadas en diferentes DBMS como Access o SQL. El ODBC provee de unas caracteríisticas siempre homogéneas, y por el otro permite distintos controladores que aseguran la conectividad de la aplicación con diferentes bases de datos. Casi todas las DB actuales tienen un ODBC.[1]
+                    <strong>¿Por qué es una buena práctica separar el modelo del controlador?
+                    </strong><br><br>Para tener una mejor estructura y que las queries y conexión puedan ser reutilizadas por diversas parte de la aplicación, accediendo a un solo archivo php con todo esto, además de que puede lograrse que este archivo util o modelo tenga mayor seguridad pues es ahí donde se accede a la base de datos y se obtienen sus datos.
                     </div>
                 </div><br>
                 
