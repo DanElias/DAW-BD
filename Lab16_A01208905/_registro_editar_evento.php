@@ -7,6 +7,7 @@
 
     if(isset($_POST["submit"])) {
         //Aquí guardo lo que está en los campos del form en variables
+        $_POST["id_evento"] = htmlentities($_POST["id_evento"]);
         $_POST["nombre_evento"] = htmlentities($_POST["nombre_evento"]);
         $_POST["fecha_evento"] = htmlentities($_POST["fecha_evento"]);
         $_POST["hora_evento"] = htmlentities($_POST["hora_evento"]);
@@ -14,14 +15,14 @@
         $_POST["descripcion_evento"] = htmlentities($_POST["descripcion_evento"]);
         
     //Aquí checo que se hayan llenado todos los campos y que no sólo estén vacíos
-       if (isset($_POST["nombre_evento"]) && isset($_POST["hora_evento"]) && isset($_POST["fecha_evento"]) && isset($_POST["lugar_evento"]) && isset($_POST["descripcion_evento"]) && $_POST["nombre_evento"] != "" && $_POST["fecha_evento"] != "" && $_POST["hora_evento"] != "" && $_POST["lugar_evento"] != "" && $_POST["descripcion_evento"] != ""){
+       if (isset($_POST["nombre_evento"]) && isset($_POST["fecha_evento"]) && isset($_POST["lugar_evento"]) && isset($_POST["descripcion_evento"]) && $_POST["nombre_evento"] != "" && $_POST["fecha_evento"] != "" && $_POST["lugar_evento"] != "" && $_POST["descripcion_evento"] != ""){
                 // si no hay errores entonces mostrar pantalla de éxito
                 if(!checkmydate($error) && !is_numeric($_POST["nombre_evento"]) && !is_numeric($_POST["descripcion_evento"]) && !is_numeric($_POST["lugar_evento"])){
                     
                     //EN ESTA PARTE A CONTINUACION HARÉ EL REGISTRO EN LA BASE DE DATOS
                     //PODEMOS VER QUE LO DEMÁS DEL CÓDIGO ES LA PARTE QUE VALIDA QUE EL FORM SE LLENÓ DE MANERA CORRECTA.
                     //------------------------------------------------------------------------------------------------------------
-                    if(insertarEvento($_POST["nombre_evento"],$_POST["fecha_evento"],$_POST["lugar_evento"], $_POST["descripcion_evento"])){
+                    if(editarEvento($_POST["id_evento"],$_POST["nombre_evento"],$_POST["fecha_evento"],$_POST["lugar_evento"], $_POST["descripcion_evento"])){
                         //Si se lograron registrar los datos en la Base de Datos: Mandar mensaje de éxito
                         include("partials/_header.html"); // se vuelve a cargar una página
                         $input_date2 = $_POST["fecha_evento"];//Las fechas se guardan como 1998-03-28
