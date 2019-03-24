@@ -18,9 +18,9 @@
     
     _parallax("partials/images/si5.jpg");
     
-    _simple_white_section("LAB 19 DAW", "AJAX :)");
+    _simple_white_section("LAB 19 DAW", "Registros y Consultas en BD con SQL PHP :)");
 
-    _labcases();
+    _lab16cases();
 
     _form_evento();
 

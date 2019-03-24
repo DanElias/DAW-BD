@@ -35,6 +35,8 @@
         closeDb($conn);
         
         return $result;
+        
+        echo $result;
     }
 
     // regresa todos los datos de una tupla cuyo nombre sea igual al especificado
