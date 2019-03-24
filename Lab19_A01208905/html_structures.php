@@ -201,21 +201,25 @@
                 <!-- estas son las preguntas que se contestan en cada lab-->
                  <div class="row" id="preguntas"> 
                     <div class="col s12"> 
-                    <strong>¿Por qué es una buena práctica separar el modelo del controlador?
-                    </strong><br><br>Para tener una mejor estructura y que las queries y conexión puedan ser reutilizadas por diversas parte de la aplicación, accediendo a un solo archivo php con todo esto, además de que puede lograrse que este archivo util o modelo tenga mayor seguridad pues es ahí donde se accede a la base de datos y se obtienen sus datos.
+                    <strong>¿Qué importancia tiene AJAX en el desarrollo de RIAs (Rich Internet Applicatios)?
+                    </strong><br><br>JAX permite hacer llamados asíncronas al servidor. Gracias a esta característica nuestra aplicación web puede actualizarse en tiempo real sin tener que actualizar la página y volver a mandar requests al servidor. Cada que ocurre un cambio, AJAX cambia la vista html, logrando que el usuario tenga una mejor interacción con el sitio, con tiempos de respuesta extremadamente cortos. Esto vuelve a las aplicaciones web igual de importantes y usables que las aplicaciones de escritorio.
                     </div>
                 </div><br>
                 
                  <div class="row"> 
                     <div class="col s12"> 
-                    <strong>¿Qué es SQL Injection?
-                    </strong><br><br>Es una vulnerabilidad que permite al atacante enviar o “inyectar” instrucciones SQL de forma maliciosa y malintencionada dentro del código SQL programado para la manipulación de bases de datos, de esta forma todos los datos almacenados estarían en peligro[2]
+                    <strong>¿Qué implicaciones de seguridad tiene AJAX? ¿Dónde se deben hacer las validaciones de seguridad, del lado del cliente o del lado del servidor?
+                    </strong><br><br>Como AJAX accede al servidor, pueden también ocurrir ataques de SQL Injection, Cross Site Scripting (XSS).
+                    <br>Las maneras de protegerse de ataques sería usando: .innerText que codifica el texto, nunca se debe de usar la función eval(). La información que se manda al servidor siempre debe de codificarse y asegurarse que puede ser leída por el servidor. Las validaciones siempre deben de implementarse del lado del servidor y si es posible del lado del cliente. No se debe de usar código de serialización, Regresa JSON con un objeto afuera.  Protegerse antes JSON hijacking y usar proteccion Cross-Site Request Forgery.[1]
                     </div>
                 </div><br>
                 
                  <div class="row"> 
                     <div class="col s12"> 
-                    <strong>¿Qué técnicas puedes utilizar para evitar ataques de SQL Injection?</strong><br><br>No utilizar las funciones de sql, si no las de sqli. Siempre checar que el texto ingresado sea del tipo que se espera. Poner restricciones para que no se puedan nunca realizar ciertas acciones como borrar una tabla completa. No mostrar al usuario información de error generada. Rechazar peticiones que tengan caracteres sospechosos como ; ‘ - /**/ xp_ [3]<br><br><br>[1]https://www.uv.es/jac/guia/gestion/gestion3.htm<br>[2]https://openwebinars.net/blog/que-es-sql-injection/<br>[3]https://geeks.ms/gtorres/2010/10/29/tips-para-evitar-sql-injection/
+                    <strong>¿Qué es JSON?</strong>
+                    <br><br>JSON (JavaScript Object Notation - Notación de Objetos de JavaScript) es un formato ligero de intercambio de datos. Está compuesto por una colección de pares de nombre/valor. En varios lenguajes esto es conocido como un objeto, registro, estructura, diccionario, tabla hash, lista de claves o un arreglo asociativo. También tiene Una lista ordenada de valores. En la mayoría de los lenguajes, esto se implementa como arreglos, vectores, listas o secuencias.[2]
+                    <br><br><br>[1]https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/AJAX_Security_Cheat_Sheet.md
+                    <br><br>[2]https://www.json.org/json-es.html
                     </div>
                 </div><br>
                 
