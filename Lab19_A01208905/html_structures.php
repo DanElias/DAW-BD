@@ -95,12 +95,30 @@
         echo $parallax_3cols;
     }
 
-    function _lab16cases(){
+    function _labcases(){
         $parallax_3cols=
         '
         <div class="parallax-container my_parallax_container" id="about">
             <div class="my_table">
                 <br><br>
+                
+                <div class="row">
+                    <div class="col s12 my_table_title hoverable">¡Busca un evento dinámicamente!</div>
+                </div>
+                <br>
+                
+                <!-- este es el trigger del form del modal-->
+                 <div class="row"> 
+                    <div class="col s12"> 
+                        <form>
+                            <input type="text" id="userInput" onkeyup="sendRequest()"> 
+                        </form>
+                        
+                        <div id="ajaxResponse"> <!--Aqui se va a mostrar la respuesta del servidor-->
+                        
+                        </div>
+                    </div>
+                </div><br>
                 
                 
                 <div class="row">
