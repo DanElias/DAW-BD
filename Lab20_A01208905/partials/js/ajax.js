@@ -1,5 +1,6 @@
 
 
+    //Esto se copia y pega
     function getRequestObject() {
       // Asynchronous object created, handles browser DOM differences
     
@@ -19,18 +20,16 @@
     //Funcion modificada de request que recibe 1. el id del text input element, 
     //2. El archivo php que es el controlador que genera el html de la respuesta
     //3. el id del lugar donde se va a mostrar la respuesta del ajax request
-    
     function sendRequest(idinput, filephp, idoutput){
-        
-        
         let NUEVO_CODIGO = 1;
    
         if (NUEVO_CODIGO) {
         $.get( filephp, { pattern: document.getElementById(idinput).value })
-          .done(function( data ) {
+          .done(function( data ){
               var ajaxResponse = document.getElementById( idoutput);
               ajaxResponse.innerHTML = data;
               ajaxResponse.style.visibility = "visible";
+              M.AutoInit(); //RECORDAR PONER ESTO Para que sirve el Materialize
           });
        
         } else {
@@ -57,9 +56,9 @@
     }
     
     function selectValue() {
-       var list=document.getElementById("list");
-       var userInput=document.getElementById("userInput");
-       var ajaxResponse=document.getElementById('ajaxResponse');
+       var list=document.getElementById("list_nombres");
+       var userInput=document.getElementById("busqueda_nombre");
+       var ajaxResponse=document.getElementById('select_nombres');
        userInput.value=list.options[list.selectedIndex].text;
        ajaxResponse.style.visibility="hidden";
        userInput.focus();
