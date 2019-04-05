@@ -15,7 +15,7 @@
         '<div class="parallax-container z-depth-4">
             <header id="home_header"> 
             <section>
-                <h3 class="my_header_text">Lab 20 DAW</h3>
+                <h3 class="my_header_text">Lab 23 DAW</h3>
             </section>
             </header>
             <div class="parallax ">';
@@ -211,14 +211,18 @@
                 <!-- estas son las preguntas que se contestan en cada lab-->
                  <div class="row" id="preguntas"> 
                     <div class="col s12"> 
-                    <strong>¿Qué alternativas a jQuery existen?
-                    </strong><br><br> Se puede utiliza JS puro, Zepto.js, XUI, Sizzle, Qwery. Se pueden utilizar otras opciones si no estamos trabajando en un proyecto complejo, esto porque jquery ocupa más espacio lo cual no es conveniente si no se utiliza en su totalidad.
-                    <br> <br>  [1] http://www.etnassoft.com/2011/03/28/alternativas-a-jquery/
+                    <strong>¿Qué ventajas y desventajas tiene la integración de tus aplicaciones web con servicios web desarrollados por terceros?
+                    </strong><br><br> Ventajas son que los usuarios pueden tener accesso a bases de datos remotas y protegidas, el usuario es quien autoriza el permiso. 
+                    <br> Es conveniente ya que simplifica el tener que volver a hacer de nuevo componentes complejos en tu sitio.
+                    <br> Automatiza, la interconexión entre las diferentes APIs y el sistema permite que la información se actualice en ambas plataformas. 
+                    <br> Es eficiente y permite añadir nuevas funcionalidades para el usuario.
+                    <br> Desventajas serían que a veces suele costar tiempo tener que enetender el funcionamiento de las APIs y tratar de incluirlas en tu propio sitio.
+                    <br> Muchas veces incluyen código que es de un nivel mucho más avanzado. 
+                    <br> Pueden llegar a ser peligrosas porque añaden otro punto desde el cual se pueden suscitar ataques cibernéticos
+                    <br> <br>  [1]  https://dev.esds.co.in/blog/2017/07/07/advantages-using-web-apis/ <br> [2] http://ltxsolutions.com/application-programming-interface-api-transportation/
                     </div>
                 </div><br>
-                
-                
-                <img src="diagrama.png" width="100%" >
+            
                 
             </div>
             <div class="parallax"><img src="partials/images/bg1.jpg" width="100%" ></div>
