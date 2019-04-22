@@ -7,10 +7,8 @@
     
     _parallax("partials/images/si5.jpg");
     
-    _simple_white_section("LAB 9 DAW ✌", "Toda la estructura de esta página funciona con PHP :)");
+    _simple_white_section("LAB 26 DAW", "El último Lab: Accesibilidad");
     
-    _lab9cases();
-
     _footer();
 
     //phpinfo();//muestra información de php

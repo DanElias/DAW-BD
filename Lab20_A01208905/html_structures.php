@@ -213,7 +213,6 @@
                     <div class="col s12"> 
                     <strong>¿Qué alternativas a jQuery existen?
                     </strong><br><br> Se puede utiliza JS puro, Zepto.js, XUI, Sizzle, Qwery. Se pueden utilizar otras opciones si no estamos trabajando en un proyecto complejo, esto porque jquery ocupa más espacio lo cual no es conveniente si no se utiliza en su totalidad.
-                    <br> <br>  [1] http://www.etnassoft.com/2011/03/28/alternativas-a-jquery/
                     </div>
                 </div><br>
                 
